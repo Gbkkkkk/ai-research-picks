@@ -55,6 +55,7 @@ def item_description(item: dict) -> str:
     rows = [
         ("类型", item.get("content_type", "未分类")),
         ("作者/机构", item.get("authors", "未注明")),
+        ("原始发布日期", item.get("published_at", "未注明")),
         ("主题", topics or "未分类"),
         ("推荐级别", item.get("priority", "值得浏览")),
         ("核心内容", item["summary_zh"]),
@@ -103,9 +104,10 @@ def render_index(items: list[dict], base_url: str) -> str:
     cards = []
     for item in items:
         topics = " · ".join(item.get("topics", []))
+        published = item.get("published_at", "日期未注明")
         cards.append(
             '<article class="card">'
-            f'<div class="meta">{html.escape(item.get("priority", "值得浏览"))} · {html.escape(item.get("content_type", "未分类"))} · {html.escape(topics)}</div>'
+            f'<div class="meta">{html.escape(item.get("priority", "值得浏览"))} · {html.escape(item.get("content_type", "未分类"))} · {html.escape(published)} · {html.escape(topics)}</div>'
             f'<h2><a href="{html.escape(item["url"], quote=True)}">{html.escape(item["title"])}</a></h2>'
             f'<p>{html.escape(item["summary_zh"])}</p>'
             f'<p><strong>为什么值得读：</strong>{html.escape(item["why_zh"])}</p>'
