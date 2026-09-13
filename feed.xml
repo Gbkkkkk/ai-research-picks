@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI Research Picks by Codex</title>
+    <link>https://Gbkkkkk.github.io/ai-research-picks</link>
+    <description>每周一和周四更新的 AI 论文与技术博客精选：AI memory、world models、information theory、理论 ML、AI detector 与前沿热点。</description>
+    <language>zh-CN</language>
+    <atom:link href="https://Gbkkkkk.github.io/ai-research-picks/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 13 Sep 2026 08:25:11 +0000</lastBuildDate>
+    <generator>Codex + scripts/update_feed.py</generator>
+    <item>
+      <title>订阅测试｜AI Research Picks 已就绪</title>
+      <link>https://github.com/Gbkkkkk/ai-research-picks</link>
+      <guid isPermaLink="false">ai-research-picks:3cb7daf87c606d563470367c86adbafccd211f0fbe1acadc6fccc8236402f024</guid>
+      <pubDate>Sun, 13 Sep 2026 12:00:00 +0800</pubDate>
+      <category>AI research</category>
+      <category>RSS</category>
+      <description><![CDATA[<p><strong>类型：</strong>说明</p><p><strong>作者/机构：</strong>Codex</p><p><strong>主题：</strong>AI research · RSS</p><p><strong>推荐级别：</strong>说明</p><p><strong>核心内容：</strong>这是订阅测试条目。以后每周一和周四，Codex 会先从论文与博客源中筛选，再把值得读的内容加入这个 RSS。</p><p><strong>为什么值得读：</strong>如果你在 Feedly、Inoreader 或 NewsBlur 里看到本条，说明订阅链路已经正常工作。</p><p><strong>局限/阅读提示：</strong>本条不是论文推荐；正式精选会包含原文链接、中文贡献摘要、推荐级别和局限性。</p><p><a href="https://github.com/Gbkkkkk/ai-research-picks">打开原文</a></p>]]></description>
+    </item>
+  </channel>
+</rss>
