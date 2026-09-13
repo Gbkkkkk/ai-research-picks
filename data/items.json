@@ -1,0 +1,14 @@
+[
+  {
+    "url": "https://github.com/Gbkkkkk/ai-research-picks",
+    "title": "订阅测试｜AI Research Picks 已就绪",
+    "added_at": "2026-09-13T12:00:00+08:00",
+    "content_type": "说明",
+    "authors": "Codex",
+    "topics": ["AI research", "RSS"],
+    "priority": "说明",
+    "summary_zh": "这是订阅测试条目。以后每周一和周四，Codex 会先从论文与博客源中筛选，再把值得读的内容加入这个 RSS。",
+    "why_zh": "如果你在 Feedly、Inoreader 或 NewsBlur 里看到本条，说明订阅链路已经正常工作。",
+    "caveat_zh": "本条不是论文推荐；正式精选会包含原文链接、中文贡献摘要、推荐级别和局限性。"
+  }
+]
