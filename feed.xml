@@ -6,8 +6,62 @@
     <description>每周一和周四更新的 AI 论文与技术博客精选：AI memory、world models、information theory、理论 ML、AI detector 与前沿热点。</description>
     <language>zh-CN</language>
     <atom:link href="https://Gbkkkkk.github.io/ai-research-picks/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sun, 13 Sep 2026 09:02:47 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 14 Sep 2026 00:07:17 +0000</lastBuildDate>
     <generator>Codex + scripts/update_feed.py</generator>
+    <item>
+      <title>Memory Networks</title>
+      <link>https://arxiv.org/abs/1410.3916</link>
+      <guid isPermaLink="false">ai-research-picks:a9c2dee0e1ad804d2e2f3b950a677d9870d87104c1aee321edbcc74d709a437d</guid>
+      <pubDate>Mon, 14 Sep 2026 08:09:05 +0800</pubDate>
+      <category>AI memory</category>
+      <category>question answering</category>
+      <category>multi-hop reasoning</category>
+      <description><![CDATA[<p><strong>类型：</strong>论文</p><p><strong>作者/机构：</strong>Jason Weston, Sumit Chopra, Antoine Bordes（Facebook AI Research）</p><p><strong>原始发布日期：</strong>2014-10-15</p><p><strong>主题：</strong>AI memory · question answering · multi-hop reasoning</p><p><strong>推荐级别：</strong>必读</p><p><strong>核心内容：</strong>提出可读写的外部长时记忆，并把输入映射、记忆更新、检索与响应拆成可学习组件；在问答中让模型从动态知识库检索支持事实并进行多跳推理。</p><p><strong>为什么值得读：</strong>这是现代神经记忆与检索增强系统的重要源头之一。它最值得借鉴的不是具体打分函数，而是把“模型参数中的知识”和“运行时可更新的记忆”明确分开。</p><p><strong>局限/阅读提示：</strong>原始实现依赖支持事实监督，实验包含较简单的模拟世界；全量记忆查找还会随库大小线性增长，不能直接代表今天开放域 agent memory 的能力。</p><p><a href="https://arxiv.org/abs/1410.3916">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>Generative Agents: Interactive Simulacra of Human Behavior</title>
+      <link>https://arxiv.org/abs/2304.03442</link>
+      <guid isPermaLink="false">ai-research-picks:efc9ff30e0690f221d431d7d6ca7b24c9144b0714262fb252a80fc47f339885d</guid>
+      <pubDate>Mon, 14 Sep 2026 08:09:04 +0800</pubDate>
+      <category>AI memory</category>
+      <category>LLM agents</category>
+      <category>reflection</category>
+      <category>planning</category>
+      <description><![CDATA[<p><strong>类型：</strong>论文</p><p><strong>作者/机构：</strong>Joon Sung Park 等（Stanford University / Google Research）</p><p><strong>原始发布日期：</strong>2023-04-07</p><p><strong>主题：</strong>AI memory · LLM agents · reflection · planning</p><p><strong>推荐级别：</strong>必读</p><p><strong>核心内容：</strong>给 LLM agent 配置自然语言记忆流，以相关性、新近性和重要性检索经历，再周期性生成高层反思并据此规划行为；25 个 agent 的沙盒展示了由局部记忆产生的社会互动。</p><p><strong>为什么值得读：</strong>它把记忆从“检索几段文本”推进为记忆—反思—计划闭环，至今仍是讨论 episodic memory、consolidation 和 agent identity 时的共同参照系。</p><p><strong>局限/阅读提示：</strong>核心评估以小规模沙盒中的“行为可信度”为主，受提示、基础模型和人工评价影响；它展示的是设计范式，不是对长期可靠性或真实人类行为的证明。</p><p><a href="https://arxiv.org/abs/2304.03442">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>Mastering Atari, Go, Chess and Shogi by Planning with a Learned Model</title>
+      <link>https://arxiv.org/abs/1911.08265</link>
+      <guid isPermaLink="false">ai-research-picks:9c26dd01c87248a1512e396d07a3f27d0ddc4919d248439e9e63a1f666c748b0</guid>
+      <pubDate>Mon, 14 Sep 2026 08:09:03 +0800</pubDate>
+      <category>world models</category>
+      <category>model-based RL</category>
+      <category>planning</category>
+      <category>MuZero</category>
+      <description><![CDATA[<p><strong>类型：</strong>论文</p><p><strong>作者/机构：</strong>Julian Schrittwieser 等（DeepMind）</p><p><strong>原始发布日期：</strong>2019-11-19</p><p><strong>主题：</strong>world models · model-based RL · planning · MuZero</p><p><strong>推荐级别：</strong>必读</p><p><strong>核心内容：</strong>MuZero 不重建完整观测，而是学习对规划足够的隐状态动力学，直接预测奖励、策略与价值，并与树搜索联合训练；在棋类与 57 个 Atari 游戏上展示统一能力。</p><p><strong>为什么值得读：</strong>它提供了一个关键世界模型观点：模型不必像素级模拟世界，只需保留决策相关的可预测结构。这个观点对 latent world model、agent planning 与表征学习都很重要。</p><p><strong>局限/阅读提示：</strong>训练与搜索计算量很大，基准环境边界清晰且反馈密集；在开放世界、部分可观测和语言交互任务中，学到的隐状态是否忠实且可迁移仍是额外问题。</p><p><a href="https://arxiv.org/abs/1911.08265">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>Memory as Plans: World-Action Modeling with Memory-Grounded Planning</title>
+      <link>https://arxiv.org/abs/2609.11561</link>
+      <guid isPermaLink="false">ai-research-picks:affc19bf90f5153786a13cf43f5c03044f410566414d4c9fd37d7e49ce0fd9d2</guid>
+      <pubDate>Mon, 14 Sep 2026 08:09:02 +0800</pubDate>
+      <category>AI memory</category>
+      <category>world-action models</category>
+      <category>robotics</category>
+      <category>long-horizon planning</category>
+      <description><![CDATA[<p><strong>类型：</strong>论文</p><p><strong>作者/机构：</strong>Sizhe Zhao, Haozhe Xie, Weiyu Zhao, Chenchu Zhang, Huan Wang, Chenyang Wang, Qinglin Liu, Shengping Zhang（NTU Singapore 等）</p><p><strong>原始发布日期：</strong>2026-09-10</p><p><strong>主题：</strong>AI memory · world-action models · robotics · long-horizon planning</p><p><strong>推荐级别：</strong>必读</p><p><strong>核心内容：</strong>MaP-WAM 把非马尔可夫机器人任务拆成记忆支撑的规划与计划条件执行：长期多模态经历只在规划时压成语言—视觉计划，执行器保持固定上下文，并联合预测动作块与执行进度。论文报告 RMBench 83.3% 和真实机器人 78.0% 成功率。</p><p><strong>为什么值得读：</strong>它正面处理长期证据覆盖与在线延迟的矛盾，并把 memory、world model、planning 三条线连成一个可检验的系统，是本期最贴合你主线的新作。</p><p><strong>局限/阅读提示：</strong>目前是 arXiv v1，领先数字来自作者自报且集中于特定操作基准；计划压缩可能丢失未被当前规划器识别、但稍后才显得关键的视觉证据。</p><p><a href="https://arxiv.org/abs/2609.11561">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>Watermarks Without Verification: AI Text Watermarking After the EU AI Act</title>
+      <link>https://arxiv.org/abs/2609.09604</link>
+      <guid isPermaLink="false">ai-research-picks:b4335c8cc54371ee978bdf13b06f31b463d3f1c78c432281f6a4caca998b2622</guid>
+      <pubDate>Mon, 14 Sep 2026 08:09:01 +0800</pubDate>
+      <category>AI detector</category>
+      <category>text watermarking</category>
+      <category>AI governance</category>
+      <category>verification</category>
+      <description><![CDATA[<p><strong>类型：</strong>论文</p><p><strong>作者/机构：</strong>Alexander Nemecek, Vipin Chaudhary, Erman Ayday（Case Western Reserve University 等）</p><p><strong>原始发布日期：</strong>2026-09-09</p><p><strong>主题：</strong>AI detector · text watermarking · AI governance · verification</p><p><strong>推荐级别：</strong>值得浏览</p><p><strong>核心内容：</strong>论文把争论焦点从“水印是否伤害质量”转到“外部是否能验证厂商主张”，并在两个开源模型上评估 SynthID-Text：散文影响不超过更换随机种子，代码一处下降 3 个正确率点，但检测仍接近随机。</p><p><strong>为什么值得读：</strong>它为 AI detector 研究补上制度层视角：只有可复现实验、配置披露、审计与互操作检测，水印才可能成为治理基础设施，而不只是供应商声明。</p><p><strong>局限/阅读提示：</strong>实验测试的是开源 SynthID-Text 与两个开放权重模型，无法直接审计封闭部署；样本、阈值与攻击强度变化后，质量和检出率结论都可能改变。</p><p><a href="https://arxiv.org/abs/2609.09604">打开原文</a></p>]]></description>
+    </item>
     <item>
       <title>The Information Bottleneck Method</title>
       <link>https://arxiv.org/abs/physics/0004057</link>

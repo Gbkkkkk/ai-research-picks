@@ -193,5 +193,70 @@
     "summary_zh": "用经典图解逐步解释 LSTM 的 cell state、遗忘门、输入门与输出门，说明门控如何缓解普通 RNN 的长期依赖学习问题。",
     "why_zh": "现代 agent memory 已远超 LSTM，但理解“状态如何选择性保留、写入和读取”仍是研究记忆机制的最低层直觉基础。",
     "caveat_zh": "内容面向 2015 年的循环网络范式，不覆盖 Transformer、外部检索或多层 agent memory；价值主要在机制解释。"
+  },
+  {
+    "url": "https://arxiv.org/abs/1410.3916",
+    "title": "Memory Networks",
+    "added_at": "2026-09-14T08:09:05+08:00",
+    "published_at": "2014-10-15",
+    "content_type": "论文",
+    "authors": "Jason Weston, Sumit Chopra, Antoine Bordes（Facebook AI Research）",
+    "topics": ["AI memory", "question answering", "multi-hop reasoning"],
+    "priority": "必读",
+    "summary_zh": "提出可读写的外部长时记忆，并把输入映射、记忆更新、检索与响应拆成可学习组件；在问答中让模型从动态知识库检索支持事实并进行多跳推理。",
+    "why_zh": "这是现代神经记忆与检索增强系统的重要源头之一。它最值得借鉴的不是具体打分函数，而是把“模型参数中的知识”和“运行时可更新的记忆”明确分开。",
+    "caveat_zh": "原始实现依赖支持事实监督，实验包含较简单的模拟世界；全量记忆查找还会随库大小线性增长，不能直接代表今天开放域 agent memory 的能力。"
+  },
+  {
+    "url": "https://arxiv.org/abs/2304.03442",
+    "title": "Generative Agents: Interactive Simulacra of Human Behavior",
+    "added_at": "2026-09-14T08:09:04+08:00",
+    "published_at": "2023-04-07",
+    "content_type": "论文",
+    "authors": "Joon Sung Park 等（Stanford University / Google Research）",
+    "topics": ["AI memory", "LLM agents", "reflection", "planning"],
+    "priority": "必读",
+    "summary_zh": "给 LLM agent 配置自然语言记忆流，以相关性、新近性和重要性检索经历，再周期性生成高层反思并据此规划行为；25 个 agent 的沙盒展示了由局部记忆产生的社会互动。",
+    "why_zh": "它把记忆从“检索几段文本”推进为记忆—反思—计划闭环，至今仍是讨论 episodic memory、consolidation 和 agent identity 时的共同参照系。",
+    "caveat_zh": "核心评估以小规模沙盒中的“行为可信度”为主，受提示、基础模型和人工评价影响；它展示的是设计范式，不是对长期可靠性或真实人类行为的证明。"
+  },
+  {
+    "url": "https://arxiv.org/abs/1911.08265",
+    "title": "Mastering Atari, Go, Chess and Shogi by Planning with a Learned Model",
+    "added_at": "2026-09-14T08:09:03+08:00",
+    "published_at": "2019-11-19",
+    "content_type": "论文",
+    "authors": "Julian Schrittwieser 等（DeepMind）",
+    "topics": ["world models", "model-based RL", "planning", "MuZero"],
+    "priority": "必读",
+    "summary_zh": "MuZero 不重建完整观测，而是学习对规划足够的隐状态动力学，直接预测奖励、策略与价值，并与树搜索联合训练；在棋类与 57 个 Atari 游戏上展示统一能力。",
+    "why_zh": "它提供了一个关键世界模型观点：模型不必像素级模拟世界，只需保留决策相关的可预测结构。这个观点对 latent world model、agent planning 与表征学习都很重要。",
+    "caveat_zh": "训练与搜索计算量很大，基准环境边界清晰且反馈密集；在开放世界、部分可观测和语言交互任务中，学到的隐状态是否忠实且可迁移仍是额外问题。"
+  },
+  {
+    "url": "https://arxiv.org/abs/2609.11561",
+    "title": "Memory as Plans: World-Action Modeling with Memory-Grounded Planning",
+    "added_at": "2026-09-14T08:09:02+08:00",
+    "published_at": "2026-09-10",
+    "content_type": "论文",
+    "authors": "Sizhe Zhao, Haozhe Xie, Weiyu Zhao, Chenchu Zhang, Huan Wang, Chenyang Wang, Qinglin Liu, Shengping Zhang（NTU Singapore 等）",
+    "topics": ["AI memory", "world-action models", "robotics", "long-horizon planning"],
+    "priority": "必读",
+    "summary_zh": "MaP-WAM 把非马尔可夫机器人任务拆成记忆支撑的规划与计划条件执行：长期多模态经历只在规划时压成语言—视觉计划，执行器保持固定上下文，并联合预测动作块与执行进度。论文报告 RMBench 83.3% 和真实机器人 78.0% 成功率。",
+    "why_zh": "它正面处理长期证据覆盖与在线延迟的矛盾，并把 memory、world model、planning 三条线连成一个可检验的系统，是本期最贴合你主线的新作。",
+    "caveat_zh": "目前是 arXiv v1，领先数字来自作者自报且集中于特定操作基准；计划压缩可能丢失未被当前规划器识别、但稍后才显得关键的视觉证据。"
+  },
+  {
+    "url": "https://arxiv.org/abs/2609.09604",
+    "title": "Watermarks Without Verification: AI Text Watermarking After the EU AI Act",
+    "added_at": "2026-09-14T08:09:01+08:00",
+    "published_at": "2026-09-09",
+    "content_type": "论文",
+    "authors": "Alexander Nemecek, Vipin Chaudhary, Erman Ayday（Case Western Reserve University 等）",
+    "topics": ["AI detector", "text watermarking", "AI governance", "verification"],
+    "priority": "值得浏览",
+    "summary_zh": "论文把争论焦点从“水印是否伤害质量”转到“外部是否能验证厂商主张”，并在两个开源模型上评估 SynthID-Text：散文影响不超过更换随机种子，代码一处下降 3 个正确率点，但检测仍接近随机。",
+    "why_zh": "它为 AI detector 研究补上制度层视角：只有可复现实验、配置披露、审计与互操作检测，水印才可能成为治理基础设施，而不只是供应商声明。",
+    "caveat_zh": "实验测试的是开源 SynthID-Text 与两个开放权重模型，无法直接审计封闭部署；样本、阈值与攻击强度变化后，质量和检出率结论都可能改变。"
   }
 ]
