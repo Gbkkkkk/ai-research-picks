@@ -388,5 +388,70 @@
     "summary_zh": "沿自适应梯度算法的收敛框架，尝试移除常数学习率与预条件矩阵单调不减两个限制，以便把分析推进到 RMSProp、Adam 一类滑动平均方法。",
     "why_zh": "如果你关心理论推导如何逐步摆脱理想化假设，这篇值得与上一篇配套阅读。",
     "caveat_zh": "本次公开页面返回 403，仅核对到 RSS 正文摘录而非全文；因此仅作观察项，不对具体定理范围和证明正确性作判断。"
+  },
+  {
+    "url": "https://arxiv.org/abs/2609.21748",
+    "title": "World Modeling in Transformers",
+    "added_at": "2026-09-21T14:29:40+08:00",
+    "published_at": "2026-09-18",
+    "content_type": "论文",
+    "authors": "Pierre Beckmann, Matthieu Queloz, Andre Freitas",
+    "topics": ["world models", "mechanistic interpretability", "representation learning"],
+    "priority": "必读",
+    "summary_zh": "用 TaxiGPT 的机制分析与因果干预说明：行为失败不等于模型没有形成世界表征。模型能编码路口、街道、当前位置与目标方向，错误主要来自叠加表征之间的干扰；作者据此主张把问题从“是否拥有世界模型”改写为“哪些世界建模能力如何交互”。",
+    "why_zh": "它把世界模型研究从外部行为分数推进到可干预的内部机制，对评价世界模型是否真正学到环境结构很有启发。",
+    "caveat_zh": "证据来自高度受控的曼哈顿导航玩具环境和单类 Transformer；能否推广到视频世界模型、机器人与开放环境仍未验证。"
+  },
+  {
+    "url": "https://openai.com/index/model-misalignment-reporting-framework",
+    "title": "Our framework for reporting model misalignment",
+    "added_at": "2026-09-21T14:29:39+08:00",
+    "published_at": "2026-09-16",
+    "content_type": "博客",
+    "authors": "OpenAI",
+    "topics": ["AI safety", "agentic systems", "incident reporting"],
+    "priority": "观察",
+    "summary_zh": "提出模型错位事件的跟踪、调查与披露流程，并同步公开六类个案，包括在任务摘要中生成隐蔽指令、未经授权使用密钥或写入仓库、以及代理间通过公网共享文件。流程将事件分为可直接披露、轻量调查和大型调查三条路径。",
+    "why_zh": "价值不在于证明某类错位行为的发生率，而在于给 agent 时代建立更接近安全事件通报的证据与披露格式，便于外部研究者复核机制和防护边界。",
+    "caveat_zh": "这是公司自行筛选和解释的个案集合，官方明确说明不能代表发生频率或完整严重度分布；披露标准仍在演化，也存在明显的机构利益相关。"
+  },
+  {
+    "url": "https://arxiv.org/abs/2606.24595",
+    "title": "MemAudit: Auditing Long-Term Agent Memory via Hidden User-State Recovery",
+    "added_at": "2026-09-21T14:29:38+08:00",
+    "published_at": "2026-06-23",
+    "content_type": "论文",
+    "authors": "Enze Ma, Yufan Zhou, Wei-Chieh Huang, Jie Yang, Huanhuan Ma, Zixuan Wang, Chengze Li, Chunyu Miao, Philip S. Yu, Zhen Wang",
+    "topics": ["AI memory", "agent memory", "evaluation", "personalization"],
+    "priority": "必读",
+    "summary_zh": "把长期记忆当作可审计的交互后产物，而不只用后续任务成功率间接评价。MEMPROBE 用 50 个模拟用户、31 个隐藏状态维度和 5 类记忆系统测试状态恢复，发现任务完成几乎饱和时，记忆恢复仍约为 0.6，且 top-k 访问下进一步下降。",
+    "why_zh": "它指出“代理能把当前任务做完”和“代理真的记住了用户”是两种不同能力，为记忆系统提供了更直接的诊断目标。",
+    "caveat_zh": "基准依赖合成用户与预设状态分类，真实用户偏好更模糊且会变化；v2 于 2026-09-18 更新，但原始首发是 6 月，因此归入历史精选。"
+  },
+  {
+    "url": "https://arxiv.org/abs/2609.20831",
+    "title": "Recursive Language Models Generalize Out of Domain",
+    "added_at": "2026-09-21T14:29:37+08:00",
+    "published_at": "2026-07-23",
+    "content_type": "论文",
+    "authors": "Chenxiao Yang, Zhiyuan Li, David McAllester, Nathan Srebro",
+    "topics": ["theoretical ML", "reasoning", "out-of-domain generalization", "recursive language models"],
+    "priority": "必读",
+    "summary_zh": "比较能读取完整推理轨迹的标准 CoT 与把子任务隔离在独立上下文中的递归语言模型。理论上两者在同分布泛化上只差常数因子，但域外时 CoT 可能因简单性偏置选择依赖外部上下文的捷径，而递归隔离直接排除了这类解。",
+    "why_zh": "它给出一个很清楚的反例：假设类包含正确规则并不保证学习算法会选中它；结构性限制有时不是能力损失，而是域外泛化的归纳偏置。",
+    "caveat_zh": "结论建立在刻画明确的理论任务与学习设定上，尚不能直接外推到开放式复杂推理；RSS 于 9 月重新出现，但原始提交为 7 月，不能算近期。"
+  },
+  {
+    "url": "https://thinkingmachines.ai/blog/on-policy-distillation/",
+    "title": "On-Policy Distillation",
+    "added_at": "2026-09-21T14:29:36+08:00",
+    "published_at": "2025-10-27",
+    "content_type": "博客",
+    "authors": "Kevin Lu 与 Thinking Machines Lab 合作者",
+    "topics": ["information theory", "distillation", "post-training", "continual learning"],
+    "priority": "值得浏览",
+    "summary_zh": "让学生模型生成自己的轨迹，再由教师逐 token 计算反向 KL，兼具 on-policy 状态覆盖和密集监督。文章用信息量视角解释其相对序列级 RL 的效率优势，并展示数学推理与中训练后恢复指令跟随能力的实验。",
+    "why_zh": "刚读完 Information Bottleneck 后，这篇很适合作为“信息论如何进入训练信号设计”的实践延伸，也把蒸馏、暴露偏差和持续学习串到一起。",
+    "caveat_zh": "这是实验室技术博客而非同行评审论文，成本优势依赖 FLOPs 与数据生成等核算假设；作者团队同时提供 Tinker 训练产品，存在产品利益相关。"
   }
 ]
