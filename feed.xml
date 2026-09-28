@@ -6,8 +6,63 @@
     <description>每周一和周四更新的 AI 论文与技术博客精选：AI memory、world models、information theory、理论 ML、AI detector 与前沿热点。</description>
     <language>zh-CN</language>
     <atom:link href="https://Gbkkkkk.github.io/ai-research-picks/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Thu, 24 Sep 2026 05:15:23 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 28 Sep 2026 00:06:22 +0000</lastBuildDate>
     <generator>Codex + scripts/update_feed.py</generator>
+    <item>
+      <title>Advancing Private AI Compute with secure, server-side memory</title>
+      <link>https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/</link>
+      <guid isPermaLink="false">ai-research-picks:68ead6b6af2b71441cd0f5e7ee92c2f76d1d2603c4161faf27e658aafd17eb6c</guid>
+      <pubDate>Mon, 28 Sep 2026 08:05:11 +0800</pubDate>
+      <category>AI memory</category>
+      <category>privacy</category>
+      <category>secure enclaves</category>
+      <category>cross-device assistants</category>
+      <description><![CDATA[<p><strong>类型：</strong>博客</p><p><strong>作者/机构：</strong>Google Private AI Compute Team</p><p><strong>原始发布日期：</strong>2026-09-23</p><p><strong>主题：</strong>AI memory · privacy · secure enclaves · cross-device assistants</p><p><strong>推荐级别：</strong>值得浏览</p><p><strong>核心内容：</strong>提出在云端为个人 AI 提供跨设备持久记忆：个人设备持有解密密钥，端到端加密通道将请求送入硬件隔离的安全 enclave，数据只在隔离内存中短暂解密并在更新后重新加密。团队同时公布服务器软件的防篡改公开记录、技术简报和独立安全审计信息，试图让设备在发送数据前验证服务端软件。</p><p><strong>为什么值得读：</strong>长期记忆真正落地时，核心问题不只是检索准确率，而是云端算力、跨设备连续性、密钥所有权和可验证执行能否同时成立；这篇给出了一个值得研究的系统边界。</p><p><strong>局限/阅读提示：</strong>这是尚待部署与持续验证的厂商架构说明，不等同于端到端安全证明；用户仍需信任设备密钥管理、硬件供应链、实现正确性和 Google 对公开记录及审计范围的描述，存在明显产品利益相关。</p><p><a href="https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>Runway’s WorldPrompt and the Engineering of Real-Time Worlds</title>
+      <link>https://www.latent.space/p/runway</link>
+      <guid isPermaLink="false">ai-research-picks:80e2b78c480da5f78673eeff8643226187486fae7ce2e0cb63238140c7940653</guid>
+      <pubDate>Mon, 28 Sep 2026 08:05:10 +0800</pubDate>
+      <category>world models</category>
+      <category>interactive video</category>
+      <category>autoregressive diffusion</category>
+      <category>long-term memory</category>
+      <description><![CDATA[<p><strong>类型：</strong>访谈</p><p><strong>作者/机构：</strong>Richard MacManus；采访 Kamil Sindi、Robin Kahlow 与 Anastasis Germanidis</p><p><strong>原始发布日期：</strong>2026-09-25</p><p><strong>主题：</strong>world models · interactive video · autoregressive diffusion · long-term memory</p><p><strong>推荐级别：</strong>观察</p><p><strong>核心内容：</strong>介绍 GWM Worlds 2 的 WorldPrompt：用初始画面、持久上下文和带时间戳的动作实时控制生成世界。系统把双向视频扩散改造成逐帧自回归生成，再通过蒸馏降低扩散步数，以 720p、24fps 和同步音频运行；访谈也明确指出长期记忆不完美，生成误差会随反馈帧累积。</p><p><strong>为什么值得读：</strong>它把世界模型从离线视频生成推进为实时 runtime，并清楚展示控制接口、延迟、上下文保留和物理一致性之间的工程权衡。</p><p><strong>局限/阅读提示：</strong>这是研究预览和公司高管访谈，不是独立基准或同行评审结果；WorldPrompt 仍是提示接口而非可验证的状态机，复杂动作遵循、长程因果一致性和运行成本尚未充分公开。</p><p><a href="https://www.latent.space/p/runway">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>MemoryArena: Benchmarking Agent Memory in Interdependent Multi-Session Agentic Tasks</title>
+      <link>https://arxiv.org/abs/2602.16313</link>
+      <guid isPermaLink="false">ai-research-picks:4ddec4403f7bcda31b63b21385f210d448cf8277d05660c150ba71df96899168</guid>
+      <pubDate>Mon, 28 Sep 2026 08:05:09 +0800</pubDate>
+      <category>AI memory</category>
+      <category>agent evaluation</category>
+      <category>multi-session agents</category>
+      <category>long-term memory</category>
+      <description><![CDATA[<p><strong>类型：</strong>论文</p><p><strong>作者/机构：</strong>Zexue He, Yu Wang, Churan Zhi, Yuanzhe Hu, Tzu-Ping Chen, Lang Yin, Ze Chen, Tong Arthur Wu, Siru Ouyang, Zihan Wang, Jiaxin Pei, Julian McAuley, Yejin Choi, Alex Pentland</p><p><strong>原始发布日期：</strong>2026-02-18</p><p><strong>主题：</strong>AI memory · agent evaluation · multi-session agents · long-term memory</p><p><strong>推荐级别：</strong>必读</p><p><strong>核心内容：</strong>把记忆获取与后续行动放入连续的多会话 Memory-Agent-Environment 循环，而不是分别测试文本回忆和单轮任务。人工设计的子任务彼此依赖，覆盖网页导航、偏好约束规划、渐进式搜索和形式推理；在 LoCoMo 等长上下文基准上接近饱和的代理，在这里仍表现明显较差。</p><p><strong>为什么值得读：</strong>它更接近真实长期代理：记忆的价值不在于复述过去，而在于能否把先前行动、反馈和失败转化成下一次决策所需的经验。</p><p><strong>局限/阅读提示：</strong>任务仍是人工构造且环境范围有限，不能代表开放式长期使用中的用户变化、隐私与社会交互；v2 于 2026-09-17 更新，但首发在 2 月，因此归入历史精选。</p><p><a href="https://arxiv.org/abs/2602.16313">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>Memory Is Not Always Needed: Characterizing Conditional Memory in Scientific Reasoning</title>
+      <link>https://arxiv.org/abs/2608.23982</link>
+      <guid isPermaLink="false">ai-research-picks:78640f4da360e31a6e17a29c78ff9f98bb06053dfc86eb957d11464b4d3fc496</guid>
+      <pubDate>Mon, 28 Sep 2026 08:05:08 +0800</pubDate>
+      <category>AI memory</category>
+      <category>scientific reasoning</category>
+      <category>memory routing</category>
+      <category>mechanistic analysis</category>
+      <description><![CDATA[<p><strong>类型：</strong>论文</p><p><strong>作者/机构：</strong>Zhen Bi, Xueshu Chen, Yan Wang, Zhizhi Peng, Haosen Hong, Zhen Wang, Zhixuan Chu, Bingyu Zhu, Jungang Lou</p><p><strong>原始发布日期：</strong>2026-08-25</p><p><strong>主题：</strong>AI memory · scientific reasoning · memory routing · mechanistic analysis</p><p><strong>推荐级别：</strong>必读</p><p><strong>核心内容：</strong>研究外部条件记忆在科学推理中何时有帮助、何时反而引入捷径或干扰已有能力。作者分析知识边界和记忆注入节点，设计 Knowledge Boundary-Aware Router，在生成前决定是否启用记忆、向哪些层注入以及注入强度；在生物和化学任务上比静态或随机路由更能保留收益并压制退化。</p><p><strong>为什么值得读：</strong>它把“给模型更多记忆”改写为选择性资源分配问题：可靠系统不仅要会检索，还要判断当前问题是否真的需要外部记忆。</p><p><strong>局限/阅读提示：</strong>证据来自两个模型家族和六类生物化学任务，输入代理信号与知识边界估计可能存在数据集依赖；跨领域、跨模型及真实 RAG 系统中的泛化仍待验证。</p><p><a href="https://arxiv.org/abs/2608.23982">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>Data Provenance Auditing of Fine-Tuned Large Language Models with a Text-Preserving Technique</title>
+      <link>https://arxiv.org/abs/2510.09655</link>
+      <guid isPermaLink="false">ai-research-picks:c2ff06b89bfdbd2af38c437fb7bc572892c0906ea791d5aa92fe8231d3cbe8c9</guid>
+      <pubDate>Mon, 28 Sep 2026 08:05:07 +0800</pubDate>
+      <category>data provenance</category>
+      <category>AI detection</category>
+      <category>fine-tuning audit</category>
+      <category>copyright</category>
+      <description><![CDATA[<p><strong>类型：</strong>论文</p><p><strong>作者/机构：</strong>Yanming Li, Cédric Eichler, Nicolas Anciaux, Alexandra Bensamoun, Lorena Gonzalez Manzano, Seifeddine Ghozzi</p><p><strong>原始发布日期：</strong>2025-10-07</p><p><strong>主题：</strong>data provenance · AI detection · fine-tuning audit · copyright</p><p><strong>推荐级别：</strong>必读</p><p><strong>核心内容：</strong>在敏感或受版权保护文本中预先加入由不可见 Unicode 构成的 cue-reply 标记，再通过仅含 cue 的黑盒查询检测模型是否在微调中见过相应文档。方法用保留的反事实标记和排序检验控制假阳性；论文报告在实验设置中达到 96.7% 真阳性率和 0% 假阳性率，即使标记文档只占语料的 4%。</p><p><strong>为什么值得读：</strong>它将 AI detector 从判断一段输出是否像机器生成，转向更可操作的取证问题：某份具体数据是否进入过微调流程，并给出统计假阳性界。</p><p><strong>局限/阅读提示：</strong>方法要求在训练前主动标记文本，不适用于未预处理的历史内容；Unicode 规范化、清洗、重写或恶意去标可能破坏信号，实验中的 0% 假阳性也不代表任意部署规模下绝对为零。</p><p><a href="https://arxiv.org/abs/2510.09655">打开原文</a></p>]]></description>
+    </item>
     <item>
       <title>Dual-Frontier: When Can an Agent Trust Its World Model?</title>
       <link>https://arxiv.org/abs/2609.26293</link>
