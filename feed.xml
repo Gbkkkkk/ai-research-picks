@@ -6,8 +6,118 @@
     <description>每周一和周四更新的 AI 论文与技术博客精选：AI memory、world models、information theory、理论 ML、AI detector 与前沿热点。</description>
     <language>zh-CN</language>
     <atom:link href="https://Gbkkkkk.github.io/ai-research-picks/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon, 28 Sep 2026 00:06:22 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 02 Oct 2026 11:13:54 +0000</lastBuildDate>
     <generator>Codex + scripts/update_feed.py</generator>
+    <item>
+      <title>Interpreting Reasoning of Large Language Models via Partial Information Decomposition</title>
+      <link>https://arxiv.org/abs/2610.00571</link>
+      <guid isPermaLink="false">ai-research-picks:5f563d4dc78862b703b4bb16f77caa76a7faaa4efef67cf119e3b97c80b49acb</guid>
+      <pubDate>Fri, 02 Oct 2026 19:12:05 +0800</pubDate>
+      <category>information theory</category>
+      <category>LLM reasoning</category>
+      <category>partial information decomposition</category>
+      <category>interpretability</category>
+      <description><![CDATA[<p><strong>类型：</strong>论文</p><p><strong>作者/机构：</strong>Barproda Halder, Qiuyi Zhang, Sanghamitra Dutta</p><p><strong>原始发布日期：</strong>2026-09-30</p><p><strong>主题：</strong>information theory · LLM reasoning · partial information decomposition · interpretability</p><p><strong>推荐级别：</strong>必读</p><p><strong>核心内容：</strong>提出 SLIDER，用部分信息分解把相邻推理步骤对最终答案的信息贡献拆成独有、冗余与协同三部分，并据此定义步骤级与轨迹级重复推理指标 RRI。在 PRMBench 的冗余子集上，步骤级识别准确率比嵌入相似度和信息增益基线高 10 个百分点以上；基于轨迹 RRI 选择微调数据，还能在大体保持任务表现的同时缩短推理。</p><p><strong>为什么值得读：</strong>它把“思维链太长、太重复”的直觉问题变成可度量的信息论对象，是从 Information Bottleneck 继续走向推理过程分析的一篇自然延伸。</p><p><strong>局限/阅读提示：</strong>RRI 的质量依赖部分信息量的估计与所选冗余标注；和推理长度相关不等于能完整刻画忠实性、正确性或隐藏推理。论文目前是 ICLR 2026 workshop 接收版本。</p><p><a href="https://arxiv.org/abs/2610.00571">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>MemFit: Efficient Long-Term Agentic Memory</title>
+      <link>https://arxiv.org/abs/2610.00872</link>
+      <guid isPermaLink="false">ai-research-picks:c6d63728f8e062e9defbfd0693c869cf233e2537b790b15e2657721cb795311d</guid>
+      <pubDate>Fri, 02 Oct 2026 19:12:05 +0800</pubDate>
+      <category>AI memory</category>
+      <category>long-term agents</category>
+      <category>retrieval</category>
+      <category>multimodal memory</category>
+      <description><![CDATA[<p><strong>类型：</strong>论文</p><p><strong>作者/机构：</strong>Mitchell Piehl, Muchao Ye</p><p><strong>原始发布日期：</strong>2026-10-01</p><p><strong>主题：</strong>AI memory · long-term agents · retrieval · multimodal memory</p><p><strong>推荐级别：</strong>必读</p><p><strong>核心内容：</strong>提出一种低写入成本的长期代理记忆：每轮对话原样追加保存，不调用 LLM 做在线压缩，只用分段摘要建立索引；读取时组合词法、语义检索和交叉编码器重排，并扩展到带图像描述的多模态记忆。作者在 LoCoMo、MemGallery 与 LongMemEval-S 上报告了领先结果，同时显著降低记忆构建时间和费用。</p><p><strong>为什么值得读：</strong>它把焦点从“如何让 LLM 整理记忆”转向“能否不依赖 LLM 完成写入与检索”，对真实长期代理的延迟和成本约束很有启发。</p><p><strong>局限/阅读提示：</strong>结论来自三个常用基准且论文为首版预印本；追加式原文存储会把隐私、遗忘、去重和长期存储规模问题留给系统层，所谓 LLM-free 检索仍使用学习式编码器与重排器。</p><p><a href="https://arxiv.org/abs/2610.00872">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>Kepler: Auditable World Models for ARC-AGI-3</title>
+      <link>https://arxiv.org/abs/2610.00834</link>
+      <guid isPermaLink="false">ai-research-picks:5674311e670f915167a86fce6a73e27c085bedfec516c8583cebe7fbcce1bd2e</guid>
+      <pubDate>Fri, 02 Oct 2026 19:12:05 +0800</pubDate>
+      <category>world models</category>
+      <category>ARC-AGI-3</category>
+      <category>agent evaluation</category>
+      <category>auditability</category>
+      <description><![CDATA[<p><strong>类型：</strong>论文</p><p><strong>作者/机构：</strong>Wensen Wu</p><p><strong>原始发布日期：</strong>2026-09-30</p><p><strong>主题：</strong>world models · ARC-AGI-3 · agent evaluation · auditability</p><p><strong>推荐级别：</strong>必读</p><p><strong>核心内容：</strong>Kepler 把交互环境中的假设写成可执行世界模型，并用历史转移回放和条件预测检查来验证。在固定 Claude Opus 5 配置下，它在 ARC-AGI-3 的 25 个公开游戏上获得服务器验证的满分，并公开代码与轨迹；更重要的是，论文详述了源码泄漏、代理重建被移除 harness、自动修复掩盖故障规划器等三类评测失效。</p><p><strong>为什么值得读：</strong>最值得读的不是满分，而是它展示了怎样把世界模型变成可审计对象，以及高分如何被泄漏、缓存、重试策略和巨额推理预算误导。</p><p><strong>局限/阅读提示：</strong>这是单作者预印本，结果只覆盖公开题集且消耗约 8.58 亿 token、按当时标价约 778 美元；作者自己发现过源码泄漏，因此仍需私有测试集与独立复现。</p><p><a href="https://arxiv.org/abs/2610.00834">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>Science or Slop?: Benchmarking and Mitigating Scientific Slop in AI-Generated Papers</title>
+      <link>https://arxiv.org/abs/2610.00531</link>
+      <guid isPermaLink="false">ai-research-picks:b9e2573735c4df6e2c9770bd169ca0491ead5c0d085a7df8a9c0c2a02ea010fa</guid>
+      <pubDate>Fri, 02 Oct 2026 19:12:05 +0800</pubDate>
+      <category>AI detector</category>
+      <category>scientific writing</category>
+      <category>AI-generated content</category>
+      <category>evaluation</category>
+      <description><![CDATA[<p><strong>类型：</strong>论文</p><p><strong>作者/机构：</strong>Yerim Oh, Young-Jun Lee, Jaewoo Ahn, Gunhee Kim, Dongyeop Kang</p><p><strong>原始发布日期：</strong>2026-09-30</p><p><strong>主题：</strong>AI detector · scientific writing · AI-generated content · evaluation</p><p><strong>推荐级别：</strong>必读</p><p><strong>核心内容：</strong>构建 SciSlopBench：390 篇 AI 生成论文分别与研究问题和贡献类型匹配的人类论文配对，并从结构、论证与实验产物三方面定义六类科学 slop 指标。组合指标在配对识别中达到 85.9%，高于 Binoculars 的 68.7%；证据约束的 SciSlopHarness 据称把 AI 与人类论文之间的差距缩小 63%，而直接优化指标会诱发 reward hacking。</p><p><strong>为什么值得读：</strong>它把检测目标从表面文风提升到科学论证链是否成立，也诚实展示了检测指标一旦成为优化目标就会被钻空子的 Goodhart 风险。</p><p><strong>局限/阅读提示：</strong>数据以计算机科学为主，且依赖特定生成器与配对流程；识别“科学 slop”不等于可靠判断作者身份，和 ICLR 评分的相关性也不能证明因果。</p><p><a href="https://arxiv.org/abs/2610.00531">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>MemGuard: Preventing Memory Contamination in Long-Term Memory-Augmented Large Language Models</title>
+      <link>https://arxiv.org/abs/2605.28009</link>
+      <guid isPermaLink="false">ai-research-picks:109f1435fcff03816d4308c1b632bfc560f4835a5117fd6d8000e78bf46e6044</guid>
+      <pubDate>Fri, 02 Oct 2026 19:12:05 +0800</pubDate>
+      <category>AI memory</category>
+      <category>memory contamination</category>
+      <category>long-term agents</category>
+      <category>hallucination</category>
+      <description><![CDATA[<p><strong>类型：</strong>论文</p><p><strong>作者/机构：</strong>Hyeonjeong Ha, Jeonghwan Kim, Cheng Qian, Jiayu Liu, William M. Campbell, Yue Wu, Yuji Zhang, Kathleen McKeown, Dilek Hakkani-Tur, Heng Ji</p><p><strong>原始发布日期：</strong>2026-05-27</p><p><strong>主题：</strong>AI memory · memory contamination · long-term agents · hallucination</p><p><strong>推荐级别：</strong>必读</p><p><strong>核心内容：</strong>把长期记忆失效定义为“异质记忆污染”：稳定用户事实、一次性事件和行为规则被放进同一空间后，语义相关但功能不兼容的内容会被当作同类证据。MemGuard 在写入时显式赋予记忆功能类型，隔离不同类型同时保留关系，只在需要时组合证据；作者报告可靠性最高提升 28.27%，检索 token 最多减少 5.8 倍。</p><p><strong>为什么值得读：</strong>它提供了比“向量相似度不够好”更深的诊断：记忆系统需要维护语义之外的证据角色和适用边界。</p><p><strong>局限/阅读提示：</strong>这是 5 月首发、9 月修订的预印本；类型体系和写入时结构化可能对领域与标注策略敏感，真实噪声、恶意记忆和持续变化的用户事实仍需验证。</p><p><a href="https://arxiv.org/abs/2605.28009">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>Information Geometric Self-Organization at the Edge of Stability in High-Capacity Kernel Associative Memories</title>
+      <link>https://arxiv.org/abs/2609.16827</link>
+      <guid isPermaLink="false">ai-research-picks:f5fa1f48dfe94567a7649dd8e5d60a2d555d88bf41b7335e8d916cf777277961</guid>
+      <pubDate>Fri, 02 Oct 2026 19:12:05 +0800</pubDate>
+      <category>associative memory</category>
+      <category>information geometry</category>
+      <category>Hopfield networks</category>
+      <category>edge of stability</category>
+      <description><![CDATA[<p><strong>类型：</strong>论文</p><p><strong>作者/机构：</strong>Akira Tamamori</p><p><strong>原始发布日期：</strong>2026-09-15</p><p><strong>主题：</strong>associative memory · information geometry · Hopfield networks · edge of stability</p><p><strong>推荐级别：</strong>值得浏览</p><p><strong>核心内容：</strong>研究用核逻辑回归训练的 Hopfield 关联记忆，发现高容量的“优化山脊”位于邻近 rank-1 谱坍缩的相变边界，主曲率在此显著放大。梯度下降并非寻找平坦极小值，而会在 Edge of Stability 附近形成自稳定反馈；论文还给出 rank-1 渐近坍缩与反馈机制的解析推导。</p><p><strong>为什么值得读：</strong>它把记忆容量、谱结构、曲率和优化动力学连到一个几何图景里，适合想从理论侧理解关联记忆形成机制的人。</p><p><strong>局限/阅读提示：</strong>结论针对特定的核逻辑回归 Hopfield 模型，作者单人且论文处于预印本阶段；能否外推到 Transformer、现代 Hopfield 网络或 agent memory 仍是开放问题。</p><p><a href="https://arxiv.org/abs/2609.16827">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>ChatGPT Images 2.5 in the Wild: A Launch-Period Dataset and Detector Evaluation</title>
+      <link>https://arxiv.org/abs/2609.15100</link>
+      <guid isPermaLink="false">ai-research-picks:b72f4796fa79cd8f6c34cbf1af75a1709987091c64a4c4b668ee367e6388693b</guid>
+      <pubDate>Fri, 02 Oct 2026 19:12:05 +0800</pubDate>
+      <category>AI detector</category>
+      <category>generated images</category>
+      <category>dataset shift</category>
+      <category>content provenance</category>
+      <description><![CDATA[<p><strong>类型：</strong>论文</p><p><strong>作者/机构：</strong>Dennis Ng, Xingyu Shen, Ankit Raj, Kidus Zewde, Tommy Duong, Yuchen Zhou, Yuxin Zhang, Neo Tiangratanakul, Simiao Ren</p><p><strong>原始发布日期：</strong>2026-09-14</p><p><strong>主题：</strong>AI detector · generated images · dataset shift · content provenance</p><p><strong>推荐级别：</strong>值得浏览</p><p><strong>核心内容：</strong>冻结收集 ChatGPT Images 2.5 发布后 51.1 小时内、8 个来源的 3478 张图像，并按归因证据分层评测 6 个固定检测器。在参考照片上校准到 5% 标记率后，真实网络集合的标记率只有 3.7%–56.4%，比 GenImage 回忆率低 42–81 个百分点；艺术图像的误报率跨度更达到 1.5%–96.5%。</p><p><strong>为什么值得读：</strong>它很好地展示了实验室检测率在分布外真实内容上如何崩塌，也提醒我们更高的标记率可能只是更高误报而非更好检测。</p><p><strong>局限/阅读提示：</strong>帖子中的生成器身份无法独立验证，来源混合严重影响内容分布，例如 NightCafe 占 39% 图像却占 77% 的奇幻场景；因此不同版本或时期之间不能作因果比较。</p><p><a href="https://arxiv.org/abs/2609.15100">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>Anatomize Deep Learning with Information Theory</title>
+      <link>https://lilianweng.github.io/posts/2017-09-28-information-bottleneck/</link>
+      <guid isPermaLink="false">ai-research-picks:af2ac25733510357c46b941e9b24687228a01ab990c29d774607c8cb445dca8b</guid>
+      <pubDate>Fri, 02 Oct 2026 19:12:05 +0800</pubDate>
+      <category>information bottleneck</category>
+      <category>information theory</category>
+      <category>deep learning theory</category>
+      <category>mutual information</category>
+      <description><![CDATA[<p><strong>类型：</strong>博客</p><p><strong>作者/机构：</strong>Lilian Weng</p><p><strong>原始发布日期：</strong>2017-09-28</p><p><strong>主题：</strong>information bottleneck · information theory · deep learning theory · mutual information</p><p><strong>推荐级别：</strong>值得浏览</p><p><strong>核心内容：</strong>从 KL 散度、互信息和数据处理不等式讲起，把深层网络视为 Markov 链，并整理 Tishby 学派用 information plane 描述训练“拟合—压缩”两阶段的观点。它还串联了深度、样本量、表示压缩与泛化的直觉，是读完原始 Information Bottleneck 后较顺滑的概念复盘。</p><p><strong>为什么值得读：</strong>用户刚读完《The Information Bottleneck Method》，这篇能迅速把抽象原理映射到深度学习问题，并暴露后续争论真正围绕哪些假设展开。</p><p><strong>局限/阅读提示：</strong>文章主要整理 2017 年 Tishby 的演讲和相关论文，不代表当前共识；“普遍存在压缩阶段”等结论后来受到估计方法、激活函数和参数化依赖方面的质疑，建议与反驳论文对读。</p><p><a href="https://lilianweng.github.io/posts/2017-09-28-information-bottleneck/">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>Agent Arena: Causal Evaluation of Agents in the Real World</title>
+      <link>https://arena.ai/blog/agent-arena-methodology</link>
+      <guid isPermaLink="false">ai-research-picks:402cb90cd02d0617c2b214a8cd8916b85bc01aa9e28f15691c448a5be2384d62</guid>
+      <pubDate>Fri, 02 Oct 2026 19:12:05 +0800</pubDate>
+      <category>agent evaluation</category>
+      <category>causal inference</category>
+      <category>real-world agents</category>
+      <category>benchmarking</category>
+      <description><![CDATA[<p><strong>类型：</strong>博客</p><p><strong>作者/机构：</strong>Arena Team</p><p><strong>原始发布日期：</strong>2026-06-04</p><p><strong>主题：</strong>agent evaluation · causal inference · real-world agents · benchmarking</p><p><strong>推荐级别：</strong>值得浏览</p><p><strong>核心内容：</strong>Agent Arena 不再依赖成对投票，而是在真实 Agent Mode 会话中随机化模型或组件选择，把它们视作多干预随机试验，再用加权估计比较确认成功、表扬/抱怨、可纠正性、命令错误恢复和工具幻觉等信号。文章还公开了形式化估计量、置信区间和近期真实任务分布，并在 10 月 1 日补充了更新后的信号与定义。</p><p><strong>为什么值得读：</strong>它提出了一条从静态 benchmark 走向在线因果评测的具体路线，尤其适合思考模型、harness、工具与成本如何在真实代理系统中解耦。</p><p><strong>局限/阅读提示：</strong>用户群、任务分布与平台界面都可能产生选择偏差，文本反馈信号也可能被误分类；方法和数据由排行榜运营方自报，且平台对产品结论存在利益相关。</p><p><a href="https://arena.ai/blog/agent-arena-methodology">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>Piloting the world&#x27;s first double-blind AI evaluations</title>
+      <link>https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/</link>
+      <guid isPermaLink="false">ai-research-picks:71c43cf780d371eea28301d085ca133fc01fe57656a6564f114ce6cf1cf31e8e</guid>
+      <pubDate>Fri, 02 Oct 2026 19:12:05 +0800</pubDate>
+      <category>AI evaluation</category>
+      <category>benchmark contamination</category>
+      <category>confidential computing</category>
+      <category>frontier models</category>
+      <description><![CDATA[<p><strong>类型：</strong>博客</p><p><strong>作者/机构：</strong>William Isaac, Sol Messing, Kristian Lum；Google DeepMind</p><p><strong>原始发布日期：</strong>2026-08-27</p><p><strong>主题：</strong>AI evaluation · benchmark contamination · confidential computing · frontier models</p><p><strong>推荐级别：</strong>观察</p><p><strong>核心内容：</strong>Google DeepMind 与 Singapore AISI、OpenMined、AVERI 和 MLCommons 试点双盲模型评测：把专有模型与保密测试题放进可验证的 GPU enclave，使评测方看不到模型权重、Google 看不到测试提示。目标是用机密计算替代只靠合同与零日志承诺的保密方式，降低 benchmark contamination 与知识产权泄露风险。</p><p><strong>为什么值得读：</strong>前沿模型越来越难用公开题可信评测，这个方案展示了如何把“谁能看到题和权重”转化成可审计的系统设计问题。</p><p><strong>局限/阅读提示：</strong>这是厂商与合作方的试点说明，不是对评测有效性的完整证明；它仍依赖硬件、云实现、远程证明和运维信任链，也无法解决题目代表性、评分器质量或模型在真实部署中的外部效度，存在明确产品利益相关。</p><p><a href="https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/">打开原文</a></p>]]></description>
+    </item>
     <item>
       <title>Advancing Private AI Compute with secure, server-side memory</title>
       <link>https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory/</link>
