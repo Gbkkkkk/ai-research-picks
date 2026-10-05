@@ -6,8 +6,63 @@
     <description>每周一和周四更新的 AI 论文与技术博客精选：AI memory、world models、information theory、理论 ML、AI detector 与前沿热点。</description>
     <language>zh-CN</language>
     <atom:link href="https://Gbkkkkk.github.io/ai-research-picks/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Fri, 02 Oct 2026 11:13:54 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 05 Oct 2026 11:05:38 +0000</lastBuildDate>
     <generator>Codex + scripts/update_feed.py</generator>
+    <item>
+      <title>DyadMem: A Long-Term Memory Benchmark of How Agents Work with Users</title>
+      <link>https://arxiv.org/abs/2610.03020</link>
+      <guid isPermaLink="false">ai-research-picks:7a5253736b372d2ae22b5d707d1c6bd5d6a881c540c94256e7da32c087313866</guid>
+      <pubDate>Mon, 05 Oct 2026 19:03:05 +0800</pubDate>
+      <category>AI memory</category>
+      <category>agent evaluation</category>
+      <category>personalization</category>
+      <category>multi-session agents</category>
+      <description><![CDATA[<p><strong>类型：</strong>论文</p><p><strong>作者/机构：</strong>Yifei Tao, Xinyu Zhong, Henry Hengyuan Zhao, Fanyi Wang, Tengda Guo, Wentao Qiu, Ying Wang, Liujian Tang</p><p><strong>原始发布日期：</strong>2026-10-02</p><p><strong>主题：</strong>AI memory · agent evaluation · personalization · multi-session agents</p><p><strong>推荐级别：</strong>必读</p><p><strong>核心内容：</strong>提出 User-conditioned Relational Agent Memory，要求代理不仅记住用户事实，也记住双方在长期协作中形成的特定工作方式。DyadMem 包含 3065 个 episode、50961 个 session 和 61210 个 QA，并分别标注 Capture、Update 与 Recall；20 个模型在直接给定正确记忆时表现较好，但端到端流程明显下降，还暴露出低写入召回、不完整检索和不安全删除。</p><p><strong>为什么值得读：</strong>它把长期记忆评测从“最后能否答对”拆成写入、更新、检索和使用全过程，而且首次把关系特定的协作记忆作为独立对象。</p><p><strong>局限/阅读提示：</strong>这是首版预印本，数据由预定义任务和六类记忆标注构成，能否覆盖真实用户关系、隐私边界和跨月演化仍需外部验证；大规模 QA 数量也不能自动保证交互自然度。</p><p><a href="https://arxiv.org/abs/2610.03020">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>All Work And No Play Makes Jack a Dull Boy: Understanding and Preventing Catastrophic Strategy Collapse in RLVR</title>
+      <link>https://arxiv.org/abs/2610.02835</link>
+      <guid isPermaLink="false">ai-research-picks:4dcd2967bf9b4f32782dd9812089caf564e4d89aa801fae97575e0d9e28be194</guid>
+      <pubDate>Mon, 05 Oct 2026 19:03:05 +0800</pubDate>
+      <category>RLVR</category>
+      <category>information theory</category>
+      <category>reasoning diversity</category>
+      <category>post-training</category>
+      <description><![CDATA[<p><strong>类型：</strong>论文</p><p><strong>作者/机构：</strong>Qiyuan Huang, Tianshi Xu, Meng Li</p><p><strong>原始发布日期：</strong>2026-10-02</p><p><strong>主题：</strong>RLVR · information theory · reasoning diversity · post-training</p><p><strong>推荐级别：</strong>必读</p><p><strong>核心内容：</strong>将 GRPO 类 RLVR 后训练的晚期退化解释为策略容量坍缩：常见目标会持续把概率集中到单一推理策略，而保持非平凡任务准确率又需要最低策略容量。作者给出在线预警量 Mirrored Entanglement Index，并提出暴露多种推理路径、限制单一路径支配优化的 Mesh Learning；在 Qwen 与 Phi 家族的数学、知识和代码任务上报告最高 13.4 与 11.5 个百分点增益。</p><p><strong>为什么值得读：</strong>它把后训练中的“越训越窄”连接到优化动力学和信息论，并给出可监控指标与对应干预，适合与 reward hacking 和 CoT entropy 工作一起读。</p><p><strong>局限/阅读提示：</strong>论文长达 84 页但仍是首版预印本；策略的操作化定义、提示探针和所选模型家族可能影响结论，跨更大规模模型与不同 RL 目标的独立复现仍是关键。</p><p><a href="https://arxiv.org/abs/2610.02835">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>A Survey on Long-Term Memory Security in LLM Agents: Attacks, Defenses, and Governance Across the Memory Lifecycle</title>
+      <link>https://arxiv.org/abs/2604.16548</link>
+      <guid isPermaLink="false">ai-research-picks:034fbc8e3ea24768eebd5a154d6894c5680c3970fa6aaa79cffd50eb54137449</guid>
+      <pubDate>Mon, 05 Oct 2026 19:03:05 +0800</pubDate>
+      <category>AI memory</category>
+      <category>agent security</category>
+      <category>memory governance</category>
+      <category>provenance</category>
+      <description><![CDATA[<p><strong>类型：</strong>论文</p><p><strong>作者/机构：</strong>Zehao Lin, Xixuan Hao, Renyu Fu, Shaobo Cui, Kai Chen, Chunyu Li, Zhiyu Li, Feiyu Xiong</p><p><strong>原始发布日期：</strong>2026-04-17</p><p><strong>主题：</strong>AI memory · agent security · memory governance · provenance</p><p><strong>推荐级别：</strong>必读</p><p><strong>核心内容：</strong>用“写入、存储、检索、执行、共享传播、遗忘回滚”六阶段和完整性、机密性、可用性、治理四类目标整理长期记忆攻击与防御。进一步提出 Verifiable Memory Governance，强调来源记录、版本化、保留策略、可审计状态和可恢复控制必须从存储层开始设计，不能只在检索或执行时打补丁。</p><p><strong>为什么值得读：</strong>这是把 agent memory 从性能组件提升为有生命周期的安全状态系统的一张路线图，和 MemGuard、私有云端记忆及长期记忆 benchmark 可以形成完整阅读链。</p><p><strong>局限/阅读提示：</strong>它是已被 EMNLP 2026 接收的综述和架构提案，并非对五项治理原语的统一实证验证；攻击分类会随工具权限、共享记忆和部署架构快速变化。</p><p><a href="https://arxiv.org/abs/2604.16548">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>Scaling Laws, Carefully</title>
+      <link>https://lilianweng.github.io/posts/2026-06-24-scaling-laws/</link>
+      <guid isPermaLink="false">ai-research-picks:d01eba4a302808d5277dda6af3f7e33eaa2ecfba2380480f262c9bdf5f582056</guid>
+      <pubDate>Mon, 05 Oct 2026 19:03:05 +0800</pubDate>
+      <category>scaling laws</category>
+      <category>theoretical ML</category>
+      <category>compute allocation</category>
+      <category>data repetition</category>
+      <description><![CDATA[<p><strong>类型：</strong>博客</p><p><strong>作者/机构：</strong>Lilian Weng</p><p><strong>原始发布日期：</strong>2026-06-24</p><p><strong>主题：</strong>scaling laws · theoretical ML · compute allocation · data repetition</p><p><strong>推荐级别：</strong>值得浏览</p><p><strong>核心内容：</strong>从早期学习曲线、Kaplan 和 Chinchilla 的算力最优结论讲到有限数据、重复训练与现实拟合陷阱，并比较固定模型扫 token、IsoFLOP 和参数化拟合三类方法。文章尤其强调：指数和最优分配会受实验设计、学习率调度、数据唯一性与失败运行影响，重复数据的有效价值还会随模型容量和 epoch 数衰减。</p><p><strong>为什么值得读：</strong>它不是简单复述“规模越大越好”，而是教你怎样审查 scaling-law 结论的识别假设、外推范围和拟合不确定性，适合作为经典 Scaling Laws 论文的更新版阅读指南。</p><p><strong>局限/阅读提示：</strong>这是技术综述而非新的统一理论，许多公式来自不同实验条件下的经验曲线拟合；跨模型、跨数据域外推时仍不能把漂亮的幂律当作机制证明。</p><p><a href="https://lilianweng.github.io/posts/2026-06-24-scaling-laws/">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>“We have foundation models for language, not for physics” — Anima Anandkumar</title>
+      <link>https://www.latent.space/p/anima</link>
+      <guid isPermaLink="false">ai-research-picks:774c92e393ebe03e59fafd95581535942992ea6cfa193782fdcad6952ae81861</guid>
+      <pubDate>Mon, 05 Oct 2026 19:03:05 +0800</pubDate>
+      <category>world models</category>
+      <category>neural operators</category>
+      <category>AI for science</category>
+      <category>physical simulation</category>
+      <description><![CDATA[<p><strong>类型：</strong>访谈</p><p><strong>作者/机构：</strong>Brandon Anderson；采访 Anima Anandkumar</p><p><strong>原始发布日期：</strong>2026-08-26</p><p><strong>主题：</strong>world models · neural operators · AI for science · physical simulation</p><p><strong>推荐级别：</strong>观察</p><p><strong>核心内容：</strong>访谈讨论为何语言模型式的纯 token scaling 难以直接迁移到天气、流体和聚变等连续、多尺度物理系统：工业分辨率可能对应数千亿级上下文，而高质量样本又远少于互联网文本。Anima Anandkumar 主张用 Fourier 或 spherical neural operator 把函数空间、几何结构和物理先验写进模型，以更少数据实现稳定长程模拟，并延伸到形式验证和物理 foundation model。</p><p><strong>为什么值得读：</strong>它提供了不同于通用视频生成的 world-model 路线：不只模仿视觉轨迹，而是选择与物理系统相匹配的表示基底、算子和可验证结构。</p><p><strong>局限/阅读提示：</strong>这是 83 分钟访谈及文字稿，包含研究者和主持人的观点性概括，不等于独立 benchmark；FourCastNet、聚变加速与长程稳定性的数字应回到对应论文核验，平台也带有内容推广属性。</p><p><a href="https://www.latent.space/p/anima">打开原文</a></p>]]></description>
+    </item>
     <item>
       <title>Interpreting Reasoning of Large Language Models via Partial Information Decomposition</title>
       <link>https://arxiv.org/abs/2610.00571</link>

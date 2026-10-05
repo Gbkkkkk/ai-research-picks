@@ -778,5 +778,70 @@
     "summary_zh": "Google DeepMind 与 Singapore AISI、OpenMined、AVERI 和 MLCommons 试点双盲模型评测：把专有模型与保密测试题放进可验证的 GPU enclave，使评测方看不到模型权重、Google 看不到测试提示。目标是用机密计算替代只靠合同与零日志承诺的保密方式，降低 benchmark contamination 与知识产权泄露风险。",
     "why_zh": "前沿模型越来越难用公开题可信评测，这个方案展示了如何把“谁能看到题和权重”转化成可审计的系统设计问题。",
     "caveat_zh": "这是厂商与合作方的试点说明，不是对评测有效性的完整证明；它仍依赖硬件、云实现、远程证明和运维信任链，也无法解决题目代表性、评分器质量或模型在真实部署中的外部效度，存在明确产品利益相关。"
+  },
+  {
+    "url": "https://arxiv.org/abs/2610.03020",
+    "title": "DyadMem: A Long-Term Memory Benchmark of How Agents Work with Users",
+    "added_at": "2026-10-05T19:03:05+08:00",
+    "published_at": "2026-10-02",
+    "content_type": "论文",
+    "authors": "Yifei Tao, Xinyu Zhong, Henry Hengyuan Zhao, Fanyi Wang, Tengda Guo, Wentao Qiu, Ying Wang, Liujian Tang",
+    "topics": ["AI memory", "agent evaluation", "personalization", "multi-session agents"],
+    "priority": "必读",
+    "summary_zh": "提出 User-conditioned Relational Agent Memory，要求代理不仅记住用户事实，也记住双方在长期协作中形成的特定工作方式。DyadMem 包含 3065 个 episode、50961 个 session 和 61210 个 QA，并分别标注 Capture、Update 与 Recall；20 个模型在直接给定正确记忆时表现较好，但端到端流程明显下降，还暴露出低写入召回、不完整检索和不安全删除。",
+    "why_zh": "它把长期记忆评测从“最后能否答对”拆成写入、更新、检索和使用全过程，而且首次把关系特定的协作记忆作为独立对象。",
+    "caveat_zh": "这是首版预印本，数据由预定义任务和六类记忆标注构成，能否覆盖真实用户关系、隐私边界和跨月演化仍需外部验证；大规模 QA 数量也不能自动保证交互自然度。"
+  },
+  {
+    "url": "https://arxiv.org/abs/2610.02835",
+    "title": "All Work And No Play Makes Jack a Dull Boy: Understanding and Preventing Catastrophic Strategy Collapse in RLVR",
+    "added_at": "2026-10-05T19:03:05+08:00",
+    "published_at": "2026-10-02",
+    "content_type": "论文",
+    "authors": "Qiyuan Huang, Tianshi Xu, Meng Li",
+    "topics": ["RLVR", "information theory", "reasoning diversity", "post-training"],
+    "priority": "必读",
+    "summary_zh": "将 GRPO 类 RLVR 后训练的晚期退化解释为策略容量坍缩：常见目标会持续把概率集中到单一推理策略，而保持非平凡任务准确率又需要最低策略容量。作者给出在线预警量 Mirrored Entanglement Index，并提出暴露多种推理路径、限制单一路径支配优化的 Mesh Learning；在 Qwen 与 Phi 家族的数学、知识和代码任务上报告最高 13.4 与 11.5 个百分点增益。",
+    "why_zh": "它把后训练中的“越训越窄”连接到优化动力学和信息论，并给出可监控指标与对应干预，适合与 reward hacking 和 CoT entropy 工作一起读。",
+    "caveat_zh": "论文长达 84 页但仍是首版预印本；策略的操作化定义、提示探针和所选模型家族可能影响结论，跨更大规模模型与不同 RL 目标的独立复现仍是关键。"
+  },
+  {
+    "url": "https://arxiv.org/abs/2604.16548",
+    "title": "A Survey on Long-Term Memory Security in LLM Agents: Attacks, Defenses, and Governance Across the Memory Lifecycle",
+    "added_at": "2026-10-05T19:03:05+08:00",
+    "published_at": "2026-04-17",
+    "content_type": "论文",
+    "authors": "Zehao Lin, Xixuan Hao, Renyu Fu, Shaobo Cui, Kai Chen, Chunyu Li, Zhiyu Li, Feiyu Xiong",
+    "topics": ["AI memory", "agent security", "memory governance", "provenance"],
+    "priority": "必读",
+    "summary_zh": "用“写入、存储、检索、执行、共享传播、遗忘回滚”六阶段和完整性、机密性、可用性、治理四类目标整理长期记忆攻击与防御。进一步提出 Verifiable Memory Governance，强调来源记录、版本化、保留策略、可审计状态和可恢复控制必须从存储层开始设计，不能只在检索或执行时打补丁。",
+    "why_zh": "这是把 agent memory 从性能组件提升为有生命周期的安全状态系统的一张路线图，和 MemGuard、私有云端记忆及长期记忆 benchmark 可以形成完整阅读链。",
+    "caveat_zh": "它是已被 EMNLP 2026 接收的综述和架构提案，并非对五项治理原语的统一实证验证；攻击分类会随工具权限、共享记忆和部署架构快速变化。"
+  },
+  {
+    "url": "https://lilianweng.github.io/posts/2026-06-24-scaling-laws/",
+    "title": "Scaling Laws, Carefully",
+    "added_at": "2026-10-05T19:03:05+08:00",
+    "published_at": "2026-06-24",
+    "content_type": "博客",
+    "authors": "Lilian Weng",
+    "topics": ["scaling laws", "theoretical ML", "compute allocation", "data repetition"],
+    "priority": "值得浏览",
+    "summary_zh": "从早期学习曲线、Kaplan 和 Chinchilla 的算力最优结论讲到有限数据、重复训练与现实拟合陷阱，并比较固定模型扫 token、IsoFLOP 和参数化拟合三类方法。文章尤其强调：指数和最优分配会受实验设计、学习率调度、数据唯一性与失败运行影响，重复数据的有效价值还会随模型容量和 epoch 数衰减。",
+    "why_zh": "它不是简单复述“规模越大越好”，而是教你怎样审查 scaling-law 结论的识别假设、外推范围和拟合不确定性，适合作为经典 Scaling Laws 论文的更新版阅读指南。",
+    "caveat_zh": "这是技术综述而非新的统一理论，许多公式来自不同实验条件下的经验曲线拟合；跨模型、跨数据域外推时仍不能把漂亮的幂律当作机制证明。"
+  },
+  {
+    "url": "https://www.latent.space/p/anima",
+    "title": "“We have foundation models for language, not for physics” — Anima Anandkumar",
+    "added_at": "2026-10-05T19:03:05+08:00",
+    "published_at": "2026-08-26",
+    "content_type": "访谈",
+    "authors": "Brandon Anderson；采访 Anima Anandkumar",
+    "topics": ["world models", "neural operators", "AI for science", "physical simulation"],
+    "priority": "观察",
+    "summary_zh": "访谈讨论为何语言模型式的纯 token scaling 难以直接迁移到天气、流体和聚变等连续、多尺度物理系统：工业分辨率可能对应数千亿级上下文，而高质量样本又远少于互联网文本。Anima Anandkumar 主张用 Fourier 或 spherical neural operator 把函数空间、几何结构和物理先验写进模型，以更少数据实现稳定长程模拟，并延伸到形式验证和物理 foundation model。",
+    "why_zh": "它提供了不同于通用视频生成的 world-model 路线：不只模仿视觉轨迹，而是选择与物理系统相匹配的表示基底、算子和可验证结构。",
+    "caveat_zh": "这是 83 分钟访谈及文字稿，包含研究者和主持人的观点性概括，不等于独立 benchmark；FourCastNet、聚变加速与长程稳定性的数字应回到对应论文核验，平台也带有内容推广属性。"
   }
 ]
