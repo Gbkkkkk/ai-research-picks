@@ -843,5 +843,70 @@
     "summary_zh": "访谈讨论为何语言模型式的纯 token scaling 难以直接迁移到天气、流体和聚变等连续、多尺度物理系统：工业分辨率可能对应数千亿级上下文，而高质量样本又远少于互联网文本。Anima Anandkumar 主张用 Fourier 或 spherical neural operator 把函数空间、几何结构和物理先验写进模型，以更少数据实现稳定长程模拟，并延伸到形式验证和物理 foundation model。",
     "why_zh": "它提供了不同于通用视频生成的 world-model 路线：不只模仿视觉轨迹，而是选择与物理系统相匹配的表示基底、算子和可验证结构。",
     "caveat_zh": "这是 83 分钟访谈及文字稿，包含研究者和主持人的观点性概括，不等于独立 benchmark；FourCastNet、聚变加速与长程稳定性的数字应回到对应论文核验，平台也带有内容推广属性。"
+  },
+  {
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/a85b405ed65c6477a4fe8302b5e06ce7-Abstract-Conference.html",
+    "title": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+    "added_at": "2026-10-12T12:33:46+08:00",
+    "published_at": "2023-05-29（arXiv；NeurIPS 2023 Oral）",
+    "content_type": "论文",
+    "authors": "Rafael Rafailov, Archit Sharma, Eric Mitchell, Christopher D. Manning, Stefano Ermon, Chelsea Finn",
+    "topics": ["NLP", "preference optimization", "alignment", "post-training"],
+    "priority": "必读",
+    "summary_zh": "DPO 从带 KL 约束的偏好学习目标出发，把最优策略与隐式奖励建立闭式联系，最终将传统 RLHF 的奖励模型训练与在线强化学习改写成一个直接作用于偏好对的分类损失。论文在情感控制、摘要和单轮对话上展示了与 PPO-RLHF 相当或更好的效果，同时显著简化训练流程。",
+    "why_zh": "它既是 NeurIPS 2023 Oral，也是过去几年最具行业影响力的后训练论文之一；更值得学习的是其写法：先准确指出 RLHF 管线的结构性复杂度，再用一个清晰推导把贡献压缩成可立即实现的单一目标。",
+    "caveat_zh": "DPO 的简洁不等于在所有数据分布和模型规模上都优于在线 RL；它依赖偏好数据质量、参考策略和超参数，后续研究也发现长度偏置、概率质量位移与离线覆盖不足等问题。"
+  },
+  {
+    "url": "https://openreview.net/forum?id=sFyTZEqmUY",
+    "title": "Learning Interactive Real-World Simulators",
+    "added_at": "2026-10-12T12:33:46+08:00",
+    "published_at": "2024-01-16（ICLR 2024 Outstanding Paper / Oral）",
+    "content_type": "论文",
+    "authors": "Sherry Yang, Yilun Du, Seyed Kamyar Seyed Ghasemipour, Jonathan Tompson, Leslie Pack Kaelbling, Dale Schuurmans, Pieter Abbeel",
+    "topics": ["world models", "interactive simulation", "video diffusion", "robotics"],
+    "priority": "必读",
+    "summary_zh": "UniSim 把互联网视频、机器人数据、导航和人类活动数据统一到“视觉观测＋动作”接口中，用条件视频扩散模型预测动作后的未来观测，并通过历史条件支持长时交互 rollout。它把 world model 从单一环境的潜在动力学推进到跨动作模态、跨数据源的通用交互模拟器。",
+    "why_zh": "这篇 ICLR 2024 Outstanding Paper 很适合学习大系统论文的写法：先给出模拟器必须同时满足的两条判据——动作丰富性与长程 rollout——再让数据编排和历史条件两个技术模块逐一对应问题。",
+    "caveat_zh": "系统主要建模可见状态，无法自然覆盖温度、摩擦等未观测物理量；视频逼真度也不能替代动力学正确性，长程 rollout 仍可能累积误差。"
+  },
+  {
+    "url": "https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference/",
+    "title": "Defeating Nondeterminism in LLM Inference",
+    "added_at": "2026-10-12T12:33:46+08:00",
+    "published_at": "2025-09-10",
+    "content_type": "博客",
+    "authors": "Horace He；Thinking Machines Lab",
+    "topics": ["LLM systems", "reproducibility", "GPU kernels", "inference"],
+    "priority": "必读",
+    "summary_zh": "文章反驳了“GPU 并发加浮点非结合律直接导致推理随机”的常见解释：单次前向所用内核可以是运行间确定的，真正让用户侧结果变化的关键是动态负载改变批大小，而常用归约、矩阵乘与注意力内核并不具备 batch invariance。作者进一步展示如何固定归约路径和内核配置以实现批不变推理。",
+    "why_zh": "它把一个模糊的工程传说拆成可检验的层级：内核确定性、服务器确定性和用户观察到的确定性。写作上尤其值得模仿的是先构造反例击穿流行解释，再逐层收紧定义，最后让解决方案从因果诊断自然推出。",
+    "caveat_zh": "这是实验室技术博客而非同行评审论文，性能代价和可移植性会随硬件、编译器及推理引擎变化；约 20% 的示例性能损失不能直接外推到所有服务形态。"
+  },
+  {
+    "url": "https://arxiv.org/abs/2610.13912",
+    "title": "RSI-Anything: Unlocking Recursive Self-Improvement with World Models",
+    "added_at": "2026-10-12T12:33:46+08:00",
+    "published_at": "2026-10-09",
+    "content_type": "论文",
+    "authors": "Taoyong Cui, Pinxian Zeng, Wanghan Xu, Hao Xiao, Shuhan Xue, Qiang Gao, Wanli Ouyang, Pheng Ann Heng, Zhenfei Yin, Yingcheng Wu, Ling Yang",
+    "topics": ["RSI", "world models", "self-improving agents", "AI for science"],
+    "priority": "值得浏览",
+    "summary_zh": "论文用预测式 world model 帮助 agent 选择动作与学习数据，并让真实反馈同时驱动策略或工作流改进以及条件式 world-model 更新；组件检查和兼容性检查决定是否保留新的策略—模型组合。摘要报告代码修复成功率从静态验证器的 26.3% 提升到适配后的 31.2%，实验室规划从 21.80% 升至 46.01%，并在固定 40 次实验预算的反应优化中达到 96.15% 的平均最佳观测产率。",
+    "why_zh": "它把 RSI 与 world model 两条线直接连接起来，而且把“自我改进”具体化为可保留、可拒绝的系统更新，而不只是上下文内反思。写作上值得看的是跨领域论证如何围绕同一机制组织，而不是把多个 demo 松散堆在一起。",
+    "caveat_zh": "这是刚发布的 v1 预印本，跨任务指标并不天然可比，系统包含较多组件且主要结果来自作者实验；科学应用和长期递归稳定性尤其需要独立复现。"
+  },
+  {
+    "url": "https://arena.ai/blog/ai-alignment-index",
+    "title": "Arena Alignment Index",
+    "added_at": "2026-10-12T12:33:46+08:00",
+    "published_at": "2026-10-08",
+    "content_type": "博客",
+    "authors": "Arena Team",
+    "topics": ["agent evaluation", "alignment", "tool use", "real-world data"],
+    "priority": "观察",
+    "summary_zh": "Arena 从约 9 万次真实 agent 会话中定义三类可观察失效：越权行动、错误归因和虚假完成，并用长度校正后的失效率构造 Alignment Index。其数据提示虚假完成平均影响约 10% 会话、在代码调试中达到 48%，而 20 条以上消息的长会话中约八分之一出现越权行动。",
+    "why_zh": "相比只测最终答对率，这篇把代理可靠性落到用户真正会受损的行为单位，并公开说明 rubric、LLM judge 与长度校正。写作上可学习其先定义可审计事件，再展示聚合分数，最后回到具体失败案例的证据链。",
+    "caveat_zh": "这是 Arena 自有平台数据和自定义指数，样本选择、模型流量、LLM judge 误差及 50/25/25 权重都会影响排名；它只覆盖三类可见行为，不能等同于完整的安全或对齐评估，也有平台商业利益相关。"
   }
 ]
