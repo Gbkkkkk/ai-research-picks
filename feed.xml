@@ -6,8 +6,118 @@
     <description>每周一和周四更新的 AI 论文与技术博客精选：AI memory、world models、information theory、理论 ML、AI detector 与前沿热点。</description>
     <language>zh-CN</language>
     <atom:link href="https://Gbkkkkk.github.io/ai-research-picks/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon, 12 Oct 2026 04:34:45 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 15 Oct 2026 08:24:14 +0000</lastBuildDate>
     <generator>Codex + scripts/update_feed.py</generator>
+    <item>
+      <title>Proving Test Set Contamination in Black Box Language Models</title>
+      <link>https://arxiv.org/abs/2310.17623</link>
+      <guid isPermaLink="false">ai-research-picks:e032e0f65fe63b6ddc2986cf33cf20b454c66d3fb5f2834d79a92262230df322</guid>
+      <pubDate>Thu, 15 Oct 2026 16:22:42 +0800</pubDate>
+      <category>evaluation</category>
+      <category>test contamination</category>
+      <category>memorization</category>
+      <category>NLP</category>
+      <description><![CDATA[<p><strong>类型：</strong>论文</p><p><strong>作者/机构：</strong>Yonatan Oren, Nicole Meister, Niladri Chatterji, Faisal Ladhak, Tatsunori B. Hashimoto</p><p><strong>原始发布日期：</strong>2023-10-26（ICLR 2024 Honorable Mention / Oral）</p><p><strong>主题：</strong>evaluation · test contamination · memorization · NLP</p><p><strong>推荐级别：</strong>必读</p><p><strong>核心内容：</strong>论文把闭源模型的测试集污染检测转化为交换性检验：若训练中未见过一个本应可交换的数据集，样本的规范顺序与随机重排应具有相同似然；若模型记住了原始顺序，规范排列会异常高概率。作者给出带统计保证的黑盒检验，并在仅约一千样本、较小模型和低频污染条件下验证灵敏度。</p><p><strong>为什么值得读：</strong>它不是再造一个经验性 contamination score，而是先定义可证伪的零假设，再构造检验统计量，问题—假设—检验—功效分析的写法非常干净。对所有使用公开 benchmark 的论文都具有方法论价值。</p><p><strong>局限/阅读提示：</strong>方法依赖数据顺序具有可交换性且模型可能记住规范排列；无序集合、顺序本身带语义或经过特殊预处理的数据不一定适用，未拒绝零假设也不能证明绝对无污染。</p><p><a href="https://arxiv.org/abs/2310.17623">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks</title>
+      <link>https://proceedings.neurips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html</link>
+      <guid isPermaLink="false">ai-research-picks:c06b6dff5dbc793d95fd6eca6ff7c387075a03f0535833c18f46949faa1ee378</guid>
+      <pubDate>Thu, 15 Oct 2026 16:22:42 +0800</pubDate>
+      <category>RAG</category>
+      <category>external memory</category>
+      <category>NLP</category>
+      <category>knowledge-intensive tasks</category>
+      <description><![CDATA[<p><strong>类型：</strong>论文</p><p><strong>作者/机构：</strong>Patrick Lewis, Ethan Perez, Aleksandra Piktus, Fabio Petroni, Vladimir Karpukhin, Naman Goyal, Heinrich Küttler, Mike Lewis, Wen-tau Yih, Tim Rocktäschel, Sebastian Riedel, Douwe Kiela</p><p><strong>原始发布日期：</strong>2020-05-22（NeurIPS 2020）</p><p><strong>主题：</strong>RAG · external memory · NLP · knowledge-intensive tasks</p><p><strong>推荐级别：</strong>必读</p><p><strong>核心内容：</strong>这篇奠基工作把预训练 seq2seq 模型视作参数化记忆，把可更新的 Wikipedia 稠密索引视作非参数记忆，并在统一概率目标下联合检索与生成。RAG-Sequence 对整段输出使用同一组文档，RAG-Token 则允许不同 token 依赖不同文档，在开放域问答等任务上取得当时的强结果。</p><p><strong>为什么值得读：</strong>今天复杂的 agent memory 和 retrieval pipeline 很容易遮蔽最初问题：知识应放在权重里还是外部可检索存储里。论文写作值得学的是先用更新性、来源可追踪性与事实操控三个缺口定义需求，再给出最小可行的混合记忆架构。</p><p><strong>局限/阅读提示：</strong>论文时代的检索器、语料和生成模型已明显落后；它证明了范式的价值，却没有解决现代 RAG 的检索噪声、长文综合、冲突证据、权限与评测问题。</p><p><a href="https://proceedings.neurips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>AlphaEdit: Null-Space Constrained Knowledge Editing for Language Models</title>
+      <link>https://proceedings.iclr.cc/paper_files/paper/2025/hash/29c8c615b3187ee995029284702d3f43-Abstract-Conference.html</link>
+      <guid isPermaLink="false">ai-research-picks:a42eb399dcae062d30d75eb3c1a81c8fd07d017c1ea37f1a466c03c4ad0afc10</guid>
+      <pubDate>Thu, 15 Oct 2026 16:22:42 +0800</pubDate>
+      <category>knowledge editing</category>
+      <category>continual learning</category>
+      <category>catastrophic interference</category>
+      <category>NLP</category>
+      <description><![CDATA[<p><strong>类型：</strong>论文</p><p><strong>作者/机构：</strong>Junfeng Fang, Houcheng Jiang, Kun Wang, Yunshan Ma, Jie Shi, Xiang Wang, Xiangnan He, Tat-Seng Chua</p><p><strong>原始发布日期：</strong>2024-10-03（ICLR 2025 Outstanding Paper）</p><p><strong>主题：</strong>knowledge editing · continual learning · catastrophic interference · NLP</p><p><strong>推荐级别：</strong>必读</p><p><strong>核心内容：</strong>AlphaEdit 将参数编辑扰动投影到应保留知识所张成空间的零空间，再把投影后的更新写回模型。这个几何约束让目标知识能够改变，同时在所建模的线性条件下保持既有知识输出不变；原论文报告它只需增加一次投影，就能显著改善多种 locate-then-edit 方法的连续编辑表现。</p><p><strong>为什么值得读：</strong>它以一个极简单的线性代数操作解决“改新知识会破坏旧知识”的核心矛盾，理论命题、算法改动和实验指标高度对齐。这样的单机制论文很适合学习如何让贡献既可解释又易复用。</p><p><strong>局限/阅读提示：</strong>后续复现表明原设定内结果基本可重复，但优势不会均匀迁移到所有新架构，超长连续编辑仍会退化；零空间保证受表示、线性化与保留集合覆盖范围限制。</p><p><a href="https://proceedings.iclr.cc/paper_files/paper/2025/hash/29c8c615b3187ee995029284702d3f43-Abstract-Conference.html">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>Gated Attention for Large Language Models: Non-linearity, Sparsity, and Attention-Sink-Free</title>
+      <link>https://proceedings.neurips.cc/paper_files/paper/2025/hash/904e89bb4e632e75fb47f093b620b257-Abstract-Conference.html</link>
+      <guid isPermaLink="false">ai-research-picks:6c22ebef33dd23829508adb2dd511380dd0ff4b5b7fbd5606ae880974cccd717</guid>
+      <pubDate>Thu, 15 Oct 2026 16:22:42 +0800</pubDate>
+      <category>attention</category>
+      <category>LLM architecture</category>
+      <category>long context</category>
+      <category>scaling</category>
+      <description><![CDATA[<p><strong>类型：</strong>论文</p><p><strong>作者/机构：</strong>Zihan Qiu, Zekun Wang, Bo Zheng, Zeyu Huang, Kaiyue Wen, Songlin Yang, Rui Men, Le Yu, Fei Huang, Suozhi Huang, Dayiheng Liu, Jingren Zhou, Junyang Lin</p><p><strong>原始发布日期：</strong>2025-05-10（NeurIPS 2025 Best Paper）</p><p><strong>主题：</strong>attention · LLM architecture · long context · scaling</p><p><strong>推荐级别：</strong>必读</p><p><strong>核心内容：</strong>作者系统比较三十多种 softmax attention 加门控方式，发现把 head-specific sigmoid gate 放在 SDPA 输出之后，能稳定改善训练、扩展学习率范围并减轻 massive activation 与 attention sink。证据覆盖 1.7B dense 和 15B MoE 模型、最高 3.5T token 训练，推荐形式后来进入 Qwen3-Next。</p><p><strong>为什么值得读：</strong>论文的力量不来自复杂模块，而来自大规模、受控的消融把“门控放哪里、为什么有效”拆清楚。写作上可学习它如何围绕一个非常小的设计选择建立机制解释与工业规模证据。</p><p><strong>局限/阅读提示：</strong>结论依赖少数架构族与高算力训练条件，社区难以完整复现；门控与训练配方、归一化和数据分布之间的交互仍可能影响可迁移性。</p><p><a href="https://proceedings.neurips.cc/paper_files/paper/2025/hash/904e89bb4e632e75fb47f093b620b257-Abstract-Conference.html">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>Darwin Gödel Machine: Open-Ended Evolution of Self-Improving Agents</title>
+      <link>https://openreview.net/forum?id=pUpzQZTvGY</link>
+      <guid isPermaLink="false">ai-research-picks:4a46ccb1914644e46986fc5d154dd6efd5c94586e9a93d5a47cc6a91f5518c9a</guid>
+      <pubDate>Thu, 15 Oct 2026 16:22:42 +0800</pubDate>
+      <category>RSI</category>
+      <category>self-improving agents</category>
+      <category>open-ended search</category>
+      <category>coding agents</category>
+      <description><![CDATA[<p><strong>类型：</strong>论文</p><p><strong>作者/机构：</strong>Jenny Zhang, Shengran Hu, Cong Lu, Robert Tjarko Lange, Jeff Clune</p><p><strong>原始发布日期：</strong>2025-05-29（ICLR 2026 Poster）</p><p><strong>主题：</strong>RSI · self-improving agents · open-ended search · coding agents</p><p><strong>推荐级别：</strong>必读</p><p><strong>核心内容：</strong>DGM 让 coding agent 修改自己的代码，并通过外部 benchmark 实证验收每次变化；它不只保留单一最优后代，而是维护多样化 agent 档案并从不同分支继续探索。论文报告 SWE-bench 从 20.0% 提升到 50.0%、Polyglot 从 14.2% 提升到 30.7%，改进包括编辑工具、上下文管理和 peer-review 机制。</p><p><strong>为什么值得读：</strong>它把难以实现的“证明每次自修改有益”换成开放式搜索加经验评测，并把失败或非最优版本保留为未来 stepping stones。写作的关键是诚实地区分理论 Gödel machine、实际 harness 自修改和尚未做到的权重自修改。</p><p><strong>局限/阅读提示：</strong>这不是模型自主重写自身权重，改进主要发生在固定基础模型外的 coding harness；benchmark 过拟合、评测泄漏、算力成本和长期安全仍是核心风险。</p><p><a href="https://openreview.net/forum?id=pUpzQZTvGY">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>Harness Engineering for Self-Improvement</title>
+      <link>https://lilianweng.github.io/posts/2026-07-04-harness/</link>
+      <guid isPermaLink="false">ai-research-picks:bc65587780a40f677f2a28ae54f52d1dfeff362743839c4bf8a9ac835464e96a</guid>
+      <pubDate>Thu, 15 Oct 2026 16:22:42 +0800</pubDate>
+      <category>RSI</category>
+      <category>agent harness</category>
+      <category>persistent memory</category>
+      <category>auto-research</category>
+      <description><![CDATA[<p><strong>类型：</strong>博客</p><p><strong>作者/机构：</strong>Lilian Weng</p><p><strong>原始发布日期：</strong>2026-07-04</p><p><strong>主题：</strong>RSI · agent harness · persistent memory · auto-research</p><p><strong>推荐级别：</strong>值得浏览</p><p><strong>核心内容：</strong>文章把近期 RSI 从“模型直接改权重”的狭义想象扩展为 harness 对工作流、工具、上下文、持久状态、权限和评测的持续优化。它系统整理 workflow automation、文件系统记忆、子代理与后台任务等模式，并讨论 evolutionary search、harness—weight 联合优化和近期开源 auto-research 系统。</p><p><strong>为什么值得读：</strong>这是连接 DGM、coding agent、文件记忆和研究自动化的高密度路线图。写法上值得学的是先给操作性定义，再以设计模式组织文献，最后明确哪些是当前工程实践、哪些仍是假设。</p><p><strong>局限/阅读提示：</strong>它是综述性技术博客而非统一实验，引用的系统使用不同模型、预算和 benchmark；harness 改进也可能只是对特定评测的工程过拟合，不能自动等同于一般智能提升。</p><p><a href="https://lilianweng.github.io/posts/2026-07-04-harness/">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>From Copying to Composition: How Language Models Develop In-Context Learning</title>
+      <link>https://arxiv.org/abs/2610.19113</link>
+      <guid isPermaLink="false">ai-research-picks:6fc7f72a81c622b75f40fad83b7fee05d05ca1548d79bf916fcb33a3b190dbfe</guid>
+      <pubDate>Thu, 15 Oct 2026 16:22:42 +0800</pubDate>
+      <category>NLP</category>
+      <category>in-context learning</category>
+      <category>training dynamics</category>
+      <category>compositionality</category>
+      <description><![CDATA[<p><strong>类型：</strong>论文</p><p><strong>作者/机构：</strong>Minglai Yang, Xinyu Guo, Renxiong Wang, Sunjie Hou, Daniel Yue Zhang, Yunzhong He</p><p><strong>原始发布日期：</strong>2026-10-13</p><p><strong>主题：</strong>NLP · in-context learning · training dynamics · compositionality</p><p><strong>推荐级别：</strong>值得浏览</p><p><strong>核心内容：</strong>论文设计受控诊断，将复述邻近 demonstration 与整合整段提示中的规则信息区分开来。在十七个模型中，约三分之一更偏向复制答案；checkpoint 分析还显示，模型在准确率超过随机水平之前，就可能已经开始优先关注任务相关 token，说明 prompt control、答案偏好、无候选生成和迁移不是同步形成的单一能力。</p><p><strong>为什么值得读：</strong>它提醒我们不要用一个 accuracy 把 ICL 当作整体能力，并展示了如何用冲突样例和训练轨迹拆分潜在机制。问题设定比又一个平均分榜单更有长期价值。</p><p><strong>局限/阅读提示：</strong>这是刚发布的 v1 预印本，受控任务与真实复杂提示仍有距离；十七个模型的家族、训练数据和可获得 checkpoint 并不完全均衡。</p><p><a href="https://arxiv.org/abs/2610.19113">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>Discrete Diffusion Models are Minimax Optimal Under Sparsity</title>
+      <link>https://arxiv.org/abs/2610.19020</link>
+      <guid isPermaLink="false">ai-research-picks:38b821a66d33dbe7ea016fac260ae5d3650d71caf2d9d63c71d5eb488dfc7869</guid>
+      <pubDate>Thu, 15 Oct 2026 16:22:42 +0800</pubDate>
+      <category>theoretical ML</category>
+      <category>discrete diffusion</category>
+      <category>minimax rates</category>
+      <category>sparsity</category>
+      <description><![CDATA[<p><strong>类型：</strong>论文</p><p><strong>作者/机构：</strong>Luca Blunda, Tyler Farghly, Umut Simsekli, Alain Durmus</p><p><strong>原始发布日期：</strong>2026-10-13</p><p><strong>主题：</strong>theoretical ML · discrete diffusion · minimax rates · sparsity</p><p><strong>推荐级别：</strong>值得浏览</p><p><strong>核心内容：</strong>作者研究离散扩散在稀疏类别分布下的统计效率，并对从正则化 score-entropy 目标导出的非参数估计器证明 minimax-optimal rate。所用正则化可理解为分类 label smoothing 的扩散版本，而且不需要预先知道稀疏度参数，因而表现出对有效支持集大小的自适应。</p><p><strong>为什么值得读：</strong>它为文本等离散生成中的 diffusion 提供了一个明确的理论问题：何时模型能利用稀疏结构，而不是只与自回归模型比较经验指标。摘要的写法也很好地保持了假设、估计器和结论的一一对应。</p><p><strong>局限/阅读提示：</strong>理论对象是特定非参数估计器和稀疏假设，minimax optimality 不直接意味着大规模离散扩散语言模型在质量、速度或样本效率上优于自回归模型。</p><p><a href="https://arxiv.org/abs/2610.19020">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>Context Engineering with Deep Agents: How To Remember Without Keeping Everything In Context</title>
+      <link>https://www.langchain.com/blog/context-engineering-deep-agents-remember</link>
+      <guid isPermaLink="false">ai-research-picks:eeb5997da7760442a45d067dfcf77a5a0da68784fa1c28d84d7d0ee363242ef6</guid>
+      <pubDate>Thu, 15 Oct 2026 16:22:42 +0800</pubDate>
+      <category>agent memory</category>
+      <category>context engineering</category>
+      <category>filesystems</category>
+      <category>long-running agents</category>
+      <description><![CDATA[<p><strong>类型：</strong>博客</p><p><strong>作者/机构：</strong>Jess Weng；LangChain</p><p><strong>原始发布日期：</strong>2026-10-14</p><p><strong>主题：</strong>agent memory · context engineering · filesystems · long-running agents</p><p><strong>推荐级别：</strong>值得浏览</p><p><strong>核心内容：</strong>文章把长任务中的 context rot 拆为两类控制：阻止无关信息进入活动窗口，以及压缩或迁出已经积累的上下文。Deep Agents 用工具结果 offloading、阶段性 summarization、按需 skills、隔离式 subagents 和文件化长期记忆五种机制，让活动上下文保持精简，同时保留可恢复的原始状态。</p><p><strong>为什么值得读：</strong>它把 memory 从单一向量数据库扩大为上下文预算管理与持久状态设计，并给出明确触发点和 middleware 位置。适合与 RAG 原论文对照：一个解决知识注入，一个解决长程执行中的状态治理。</p><p><strong>局限/阅读提示：</strong>文章服务于 LangChain/Deep Agents 产品生态，阈值和组件选择不是独立 benchmark 得出的普遍最优解；摘要压缩的失真、文件检索失败和跨模型可移植性仍需自行评测。</p><p><a href="https://www.langchain.com/blog/context-engineering-deep-agents-remember">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>Why AlphaFold Didn&#x27;t Solve Protein Folding — Pushmeet Kohli, Google DeepMind &amp; Sal Candido, Biohub</title>
+      <link>https://www.latent.space/p/biohub-deepmind</link>
+      <guid isPermaLink="false">ai-research-picks:68a694837125984e014d7340dff5d7661d0a149795f772eed18d5c6bf94a15cc</guid>
+      <pubDate>Thu, 15 Oct 2026 16:22:42 +0800</pubDate>
+      <category>AI for biology</category>
+      <category>AlphaFold</category>
+      <category>scaling laws</category>
+      <category>world models</category>
+      <description><![CDATA[<p><strong>类型：</strong>访谈</p><p><strong>作者/机构：</strong>Pushmeet Kohli, Sal Candido；主持 Brandon Anderson / Latent Space</p><p><strong>原始发布日期：</strong>2026-10-10</p><p><strong>主题：</strong>AI for biology · AlphaFold · scaling laws · world models</p><p><strong>推荐级别：</strong>观察</p><p><strong>核心内容：</strong>访谈强调静态蛋白结构预测只是生物建模的一部分，动力学、无序区域、细胞级相互作用和干预后的结果仍未解决。讨论进一步区分“扩展现成数据”与“收集真正包含目标信息的数据”，并探讨蛋白语言模型、cryo-EM、virtual cell、归纳偏置及不确定性校准。</p><p><strong>为什么值得读：</strong>这是一次有价值的跨领域纠偏：它把 scaling law 问题从“多加数据是否变好”推进到“什么数据中含有要预测的因果与动态信息”。能帮助 world model 研究者避免只用语言或视频经验类比生物系统。</p><p><strong>局限/阅读提示：</strong>这是约三十二分钟的专家访谈与平台文字稿，不是同行评审研究；关于未来 drug discovery 加速和 virtual cell 的判断具有前瞻性，应回到具体论文、数据与湿实验验证。</p><p><a href="https://www.latent.space/p/biohub-deepmind">打开原文</a></p>]]></description>
+    </item>
     <item>
       <title>Direct Preference Optimization: Your Language Model is Secretly a Reward Model</title>
       <link>https://proceedings.neurips.cc/paper_files/paper/2023/hash/a85b405ed65c6477a4fe8302b5e06ce7-Abstract-Conference.html</link>
