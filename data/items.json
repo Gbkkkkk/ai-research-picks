@@ -1038,5 +1038,70 @@
     "summary_zh": "访谈强调静态蛋白结构预测只是生物建模的一部分，动力学、无序区域、细胞级相互作用和干预后的结果仍未解决。讨论进一步区分“扩展现成数据”与“收集真正包含目标信息的数据”，并探讨蛋白语言模型、cryo-EM、virtual cell、归纳偏置及不确定性校准。",
     "why_zh": "这是一次有价值的跨领域纠偏：它把 scaling law 问题从“多加数据是否变好”推进到“什么数据中含有要预测的因果与动态信息”。能帮助 world model 研究者避免只用语言或视频经验类比生物系统。",
     "caveat_zh": "这是约三十二分钟的专家访谈与平台文字稿，不是同行评审研究；关于未来 drug discovery 加速和 virtual cell 的判断具有前瞻性，应回到具体论文、数据与湿实验验证。"
+  },
+  {
+    "url": "https://arxiv.org/abs/2402.10877",
+    "title": "Robust agents learn causal world models",
+    "added_at": "2026-10-20T15:15:20+08:00",
+    "published_at": "2024-02-16（ICLR 2024 Oral、Honorable Mention）",
+    "content_type": "论文",
+    "authors": "Jonathan Richens, Tom Everitt",
+    "topics": ["world models", "causal inference", "robust agents", "theoretical ML"],
+    "priority": "必读",
+    "summary_zh": "论文把跨分布变化的稳健决策与因果世界模型联系起来：在规定的一大类分布漂移下，若智能体满足遗憾界，就必须学到数据生成过程的近似因果模型；最优智能体的模型会收敛到真实因果模型。它获得 ICLR 2024 Oral 和杰出论文荣誉提名。",
+    "why_zh": "很适合学习理论论文的写法：把‘稳健智能是否需要因果理解’这一大问题压缩成可证明的必要条件，先讲清保证的适用范围，再讨论迁移学习等含义。可与经验式 world model 论文对照阅读。",
+    "caveat_zh": "结论依赖论文定义的分布漂移类别、决策条件和遗憾界；不能外推成所有高性能 agent 都显式存有可解释因果图。"
+  },
+  {
+    "url": "https://arxiv.org/abs/2605.02177",
+    "title": "The Causal Description Gap: Information-Theoretic Separations Across Pearl's Hierarchy",
+    "added_at": "2026-10-20T15:15:20+08:00",
+    "published_at": "2026-05-04（首次公开）",
+    "content_type": "论文",
+    "authors": "Seyed Morteza Emadi",
+    "topics": ["information theory", "causal inference", "Kolmogorov complexity", "theoretical ML"],
+    "priority": "值得浏览",
+    "summary_zh": "作者用答案集合的描述长度量化 Pearl 因果层级之间的额外信息需求，构造出观测分布描述很短、单变量干预答案却需要 Θ(n²) 位的结构因果模型。即使掌握全部硬干预分布，反事实答案仍可能留下额外描述缺口。",
+    "why_zh": "它把‘观测不足以回答干预’从定性区分推进到可计量的比特差距。写作上值得借鉴的是先提出一个清楚的量化问题，再用构造、上界与近似情形逐层界定结论。",
+    "caveat_zh": "这是理论预印本，分离主要是特定模型类和最坏情形的构造；描述长度差距不能直接解释现实 world model 的平均性能差异。"
+  },
+  {
+    "url": "https://lilianweng.github.io/posts/2025-05-01-thinking/",
+    "title": "Why We Think",
+    "added_at": "2026-10-20T15:15:20+08:00",
+    "published_at": "2025-05-01",
+    "content_type": "博客",
+    "authors": "Lilian Weng",
+    "topics": ["reasoning", "test-time compute", "chain of thought", "NLP"],
+    "priority": "必读",
+    "summary_zh": "这篇综述沿测试时计算展开，梳理 token 化思考、并行采样、顺序修订、强化学习、外部工具与连续空间思考等路径，并讨论思维链是否忠实反映模型决策。它把‘多想一会儿为何有用’拆成计算资源、潜变量与优化压力等不同视角。",
+    "why_zh": "可作为进入 reasoning 研究的路线图，也适合学习综述写作：先立统一问题，再按机制组织证据，最后明确开放问题和监控思维链的风险。",
+    "caveat_zh": "这是作者的文献综述，不是同一设置下的横向实验；不同研究的模型、预算与评测不可直接比较，公开思维链也不一定忠实代表内部推理。"
+  },
+  {
+    "url": "https://arxiv.org/abs/2610.25127",
+    "title": "MemBubble: Benchmarking How Agent Memory Shapes LLM Response Diversity",
+    "added_at": "2026-10-20T15:15:20+08:00",
+    "published_at": "2026-10-18",
+    "content_type": "论文",
+    "authors": "Jiajun Tan, Fei Sun, Xinyu Ma, Shixuan Zhang, Du Su, Qi Cao, Daiting Shi, Huawei Shen, Xueqi Cheng",
+    "topics": ["agent memory", "NLP", "personalization", "information diversity"],
+    "priority": "必读",
+    "summary_zh": "作者从真实用户—助手对话提取偏好，构造 1000 个跨场景、同主题类别的测试实例，评估记忆机制对回答分布的影响。多种模型和记忆方案的回答熵相较直接提供完整交互历史平均下降 34.7%，提示个性化记忆处理本身可能压缩信息多样性。",
+    "why_zh": "这篇正面触及 agent memory 的价值冲突：更懂用户不一定让用户看到更广的世界。写法上值得学的是把‘信息茧房’转成可操作的对照组、场景构造与分布指标，而不只比较回答准确率。",
+    "caveat_zh": "这是刚发布的 v1 预印本；熵是多样性代理指标，不直接等于观点质量或真实用户长期认知变化，结论仍需独立复现。"
+  },
+  {
+    "url": "https://kexue.fm/archives/11980",
+    "title": "连续化 Softmax Attention",
+    "added_at": "2026-10-20T15:15:20+08:00",
+    "published_at": "2026-10-19",
+    "content_type": "博客",
+    "authors": "苏剑林",
+    "topics": ["attention", "theoretical ML", "continuous memory", "NLP"],
+    "priority": "观察",
+    "summary_zh": "文章从标准 Softmax Attention 的离散加权求和出发，讨论近期 Continuum Attention 所提出的连续化视角，并将其放进 EFLA、SSM 等‘连续化—离散化’的研究脉络。其价值在于提供一种推导新注意力机制的数学阅读入口。",
+    "why_zh": "适合和原论文对照，观察一篇技术博客如何从熟悉的公式切入，把新方法接到已有数学思路上，而不是只复述性能数字。",
+    "caveat_zh": "本次仅核验到公开 RSS 摘要和开头，原站全文抓取返回 403；对后续推导和实验评价不作判断。所讨论的 Continuum Attention 本身仍是新预印本，大规模适用性未证实。"
   }
 ]
