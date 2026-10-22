@@ -6,8 +6,118 @@
     <description>每周一和周四更新的 AI 论文与技术博客精选：AI memory、world models、information theory、理论 ML、AI detector 与前沿热点。</description>
     <language>zh-CN</language>
     <atom:link href="https://Gbkkkkk.github.io/ai-research-picks/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 20 Oct 2026 07:16:34 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 22 Oct 2026 09:36:04 +0000</lastBuildDate>
     <generator>Codex + scripts/update_feed.py</generator>
+    <item>
+      <title>Never Train from Scratch: Fair Comparison of Long-Sequence Models Requires Data-Driven Priors</title>
+      <link>https://proceedings.iclr.cc/paper_files/paper/2024/hash/07cf32cf61224da628157b7ed0ce994a-Abstract-Conference.html</link>
+      <guid isPermaLink="false">ai-research-picks:6de4da0887561305e987ffdd6c29e565df8315c2e7f83bc6c2d9077864af76c9</guid>
+      <pubDate>Thu, 22 Oct 2026 17:34:23 +0800</pubDate>
+      <category>long-context</category>
+      <category>NLP</category>
+      <category>state-space models</category>
+      <category>evaluation methodology</category>
+      <description><![CDATA[<p><strong>类型：</strong>论文</p><p><strong>作者/机构：</strong>Ido Amos, Jonathan Berant, Ankit Gupta</p><p><strong>原始发布日期：</strong>2023-10-04（首次公开；ICLR 2024 Outstanding Paper）</p><p><strong>主题：</strong>long-context · NLP · state-space models · evaluation methodology</p><p><strong>推荐级别：</strong>必读</p><p><strong>核心内容：</strong>作者指出，在 Long Range Arena 等长序列任务上从随机初始化直接比较架构，会夸大 Transformer 与 SSM 的差距。仅用下游任务数据进行去噪预训练后，多种架构表现大幅改善，普通 Transformer 在该基准上可与 S4 相当；工作获得 ICLR 2024 杰出论文奖。</p><p><strong>为什么值得读：</strong>它最值得学的是写作和实验方法：不急着增加新模块，而是质疑比较协议是否公平，用同一数据上的预训练对照改变问题的结论。读完可重审今天的长上下文与 memory benchmark。</p><p><strong>局限/阅读提示：</strong>结论针对论文考察的监督长序列任务和预训练协议，不能直接推出 Transformer 与所有 SSM 在大规模语言模型或所有算力预算下等价。</p><p><a href="https://proceedings.iclr.cc/paper_files/paper/2024/hash/07cf32cf61224da628157b7ed0ce994a-Abstract-Conference.html">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>Spotting LLMs With Binoculars: Zero-Shot Detection of Machine-Generated Text</title>
+      <link>https://proceedings.mlr.press/v235/hans24a.html</link>
+      <guid isPermaLink="false">ai-research-picks:922284e0539a3ebfc9d07fb70c460e7f433a493404b3a2d46f08dfac008d4b21</guid>
+      <pubDate>Thu, 22 Oct 2026 17:34:23 +0800</pubDate>
+      <category>AI text detection</category>
+      <category>zero-shot detection</category>
+      <category>NLP</category>
+      <category>distribution shift</category>
+      <description><![CDATA[<p><strong>类型：</strong>论文</p><p><strong>作者/机构：</strong>Abhimanyu Hans, Avi Schwarzschild, Valeriia Cherepanova, Hamid Kazemi, Aniruddha Saha, Micah Goldblum, Jonas Geiping, Tom Goldstein</p><p><strong>原始发布日期：</strong>2024-01-22（首次公开；ICML 2024）</p><p><strong>主题：</strong>AI text detection · zero-shot detection · NLP · distribution shift</p><p><strong>推荐级别：</strong>必读</p><p><strong>核心内容：</strong>Binoculars 用两个相关预训练语言模型的对比得分做零样本生成文本检测，无须目标生成模型的训练样本。作者在多种文本来源上报告较高检出率，并特别关注极低误报率下的表现。</p><p><strong>为什么值得读：</strong>这是一篇检测领域的重要方法基线；写作上从高误报代价出发，先定义真正有用的操作点，再说明两个现成模型为何足以构造判别信号。适合与后续跨域、改写和对抗评测并读。</p><p><strong>局限/阅读提示：</strong>论文报告的低误报与高召回来自其测试分布和阈值，不能作为任意语言、体裁、模型或人工改写文本的保证；检测分数不应单独用于高风险个体裁决。</p><p><a href="https://proceedings.mlr.press/v235/hans24a.html">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>Vision Transformers Need Registers</title>
+      <link>https://proceedings.iclr.cc/paper_files/paper/2024/hash/0b408293619f725fd30162af057e531a-Abstract-Conference.html</link>
+      <guid isPermaLink="false">ai-research-picks:153b8b9d5cc772bcec1cbfabf5ca93ee8135058ae4d03b42ab8dbe1eaa4582da</guid>
+      <pubDate>Thu, 22 Oct 2026 17:34:23 +0800</pubDate>
+      <category>computer vision</category>
+      <category>vision transformers</category>
+      <category>representation learning</category>
+      <category>interpretability</category>
+      <description><![CDATA[<p><strong>类型：</strong>论文</p><p><strong>作者/机构：</strong>Timothée Darcet, Maxime Oquab, Julien Mairal, Piotr Bojanowski</p><p><strong>原始发布日期：</strong>2023-09-28（首次公开；ICLR 2024 Outstanding Paper）</p><p><strong>主题：</strong>computer vision · vision transformers · representation learning · interpretability</p><p><strong>推荐级别：</strong>值得浏览</p><p><strong>核心内容：</strong>论文发现监督与自监督 ViT 的特征图会在信息量很低的背景区域出现高范数 token，像是被挪作内部计算的临时空间。加入专门的 register token 后，视觉特征与注意力图更平滑，并改善若干密集预测任务。</p><p><strong>为什么值得读：</strong>这是学习机制型论文写法的好材料：先用可视化和统计定位异常，再给最小结构改动，最后验证异常是否消失及任务指标是否改善。它也让我们跳出只读语言模型的视角。</p><p><strong>局限/阅读提示：</strong>register 的作用和收益取决于模型、训练方式及下游任务；不能把该实验现象外推成所有视觉 Transformer 都需要同一数量或形式的额外 token。</p><p><a href="https://proceedings.iclr.cc/paper_files/paper/2024/hash/0b408293619f725fd30162af057e531a-Abstract-Conference.html">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>Transformers are Inherently Succinct</title>
+      <link>https://proceedings.iclr.cc/paper_files/paper/2026/hash/5f7804e8855efe5554025217abc49315-Abstract-Conference.html</link>
+      <guid isPermaLink="false">ai-research-picks:c554b80470447826bca27c74d147c063c0b06e14e172906be0087f7b8cd11796</guid>
+      <pubDate>Thu, 22 Oct 2026 17:34:23 +0800</pubDate>
+      <category>theoretical ML</category>
+      <category>formal languages</category>
+      <category>transformers</category>
+      <category>verification</category>
+      <description><![CDATA[<p><strong>类型：</strong>论文</p><p><strong>作者/机构：</strong>Pascal Bergsträßer, Ryan Cotterell, Anthony W. Lin</p><p><strong>原始发布日期：</strong>2025-10-22（首次公开；ICLR 2026 Outstanding Paper）</p><p><strong>主题：</strong>theoretical ML · formal languages · transformers · verification</p><p><strong>推荐级别：</strong>值得浏览</p><p><strong>核心内容：</strong>作者不用通常的‘能否表示某语言’来衡量架构，而研究表示同一概念需要多大模型。对特定形式语言族，固定精度 Transformer 可比相应 RNN 或线性时序逻辑表达式指数级更简洁；基本验证问题也达到 EXPSPACE-complete。</p><p><strong>为什么值得读：</strong>值得学习它如何更换理论问题的量尺：从可表达性转向简洁性，并把优势与验证代价放在同一框架里。ICLR 2026 将其列为杰出论文。</p><p><strong>局限/阅读提示：</strong>结论是固定精度、形式语言与存在性构造下的复杂性结果，不直接预测现实 LLM 的准确率或可训练性；获奖委员会也注明该工作存在争议。</p><p><a href="https://proceedings.iclr.cc/paper_files/paper/2026/hash/5f7804e8855efe5554025217abc49315-Abstract-Conference.html">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>Towards monosemanticity: Decomposing language models with dictionary learning</title>
+      <link>https://www.anthropic.com/research/towards-monosemanticity-decomposing-language-models-with-dictionary-learning</link>
+      <guid isPermaLink="false">ai-research-picks:6037d3bdef49eff077f936a4fb2e8126a6a299bcda83624057a00bddacc73a44</guid>
+      <pubDate>Thu, 22 Oct 2026 17:34:23 +0800</pubDate>
+      <category>mechanistic interpretability</category>
+      <category>sparse autoencoders</category>
+      <category>dictionary learning</category>
+      <category>NLP</category>
+      <description><![CDATA[<p><strong>类型：</strong>博客</p><p><strong>作者/机构：</strong>Anthropic Interpretability Team</p><p><strong>原始发布日期：</strong>2023-10-05</p><p><strong>主题：</strong>mechanistic interpretability · sparse autoencoders · dictionary learning · NLP</p><p><strong>推荐级别：</strong>值得浏览</p><p><strong>核心内容：</strong>研究提出用字典学习寻找比单个神经元更可解释的特征；在小型 Transformer 的一个含 512 个神经元的层中，分解出四千多个特征，并展示与特定文本模式相关的例子。它为后来稀疏自编码器研究提供了重要的实验范式。</p><p><strong>为什么值得读：</strong>写作值得学的是先说明神经元多义性为何让解释失真，再定义新的分析单位，并用激活、干预及跨模型比较支持解释。推荐以技术论文而非宣传摘要的方式阅读。</p><p><strong>局限/阅读提示：</strong>核心演示主要来自小模型，选出的可解释特征有展示偏差；特征不一定完全单义，也不能据此断言大型模型已被完整理解。作者所在公司对可解释性研究有利益相关。</p><p><a href="https://www.anthropic.com/research/towards-monosemanticity-decomposing-language-models-with-dictionary-learning">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>Extrinsic Hallucinations in LLMs</title>
+      <link>https://lilianweng.github.io/posts/2024-07-07-hallucination/</link>
+      <guid isPermaLink="false">ai-research-picks:d342305e68818550acc267bc49dacb9c18316e67f5abb49678fb9a8bd7e4d4bf</guid>
+      <pubDate>Thu, 22 Oct 2026 17:34:23 +0800</pubDate>
+      <category>hallucination</category>
+      <category>factuality</category>
+      <category>RAG</category>
+      <category>NLP</category>
+      <description><![CDATA[<p><strong>类型：</strong>博客</p><p><strong>作者/机构：</strong>Lilian Weng</p><p><strong>原始发布日期：</strong>2024-07-07</p><p><strong>主题：</strong>hallucination · factuality · RAG · NLP</p><p><strong>推荐级别：</strong>值得浏览</p><p><strong>核心内容：</strong>文章聚焦与外部世界知识不符的生成内容，依次梳理成因、检出方式和缓解方法，包括检索核验、采样一致性、未知知识校准、归因及微调。它提醒读者把‘事实正确’与‘不知道时承认不知道’分开评估。</p><p><strong>为什么值得读：</strong>适合学习综述写作：先收紧容易混淆的术语边界，再按失败来源和证据类型组织方法，不把单个 benchmark 当作事实性的全部。也能帮助阅读 detector 工作时区分 AI 来源检测与事实核验。</p><p><strong>局限/阅读提示：</strong>这是截至 2024 年的综述而非统一复现实验；检索源和自动核验器自身也可能有错误，文中方法不能保证生成内容真实。</p><p><a href="https://lilianweng.github.io/posts/2024-07-07-hallucination/">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>Combining Long-Term Memory and LLMs Comes at a High Cost: From Prompt Injection to Persistent Compromise</title>
+      <link>https://arxiv.org/abs/2610.28810</link>
+      <guid isPermaLink="false">ai-research-picks:63cf8ecf1a7f77d6c7ea58efdd251243aa64e4d63612e16d5e4fb54c40224892</guid>
+      <pubDate>Thu, 22 Oct 2026 17:34:23 +0800</pubDate>
+      <category>agent memory</category>
+      <category>prompt injection</category>
+      <category>security</category>
+      <category>persistent state</category>
+      <description><![CDATA[<p><strong>类型：</strong>论文</p><p><strong>作者/机构：</strong>Pedro H. Barcha Correia, Matheus Azevedo de Sá, Paulo H. Gomes de Senna, Giovanni Mandel Martignago, Victor Takashi Hayashi, Charles Christian Miers, Marcos A. Simplicio Jr</p><p><strong>原始发布日期：</strong>2026-10-20</p><p><strong>主题：</strong>agent memory · prompt injection · security · persistent state</p><p><strong>推荐级别：</strong>必读</p><p><strong>核心内容：</strong>论文把提示注入从单会话扩展到持久记忆：被写入的恶意内容可能在后续会话继续影响模型。作者提出跨个人记忆、项目、技能及连接资源的威胁模型，并在所测试的商业服务版本中展示多类跨会话攻击。</p><p><strong>为什么值得读：</strong>紧接本周一的 MemBubble，它提醒我们长期记忆不仅有信息多样性成本，还有跨会话的信任边界问题。写作上可借鉴其‘威胁模型—攻击面—后果—防御原则’的清晰结构。</p><p><strong>局限/阅读提示：</strong>这是新发布的预印本，平台版本和防护可能迅速变化；摘要中的成功案例不能外推为所有配置的当前普遍漏洞，需结合具体复现条件阅读。</p><p><a href="https://arxiv.org/abs/2610.28810">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>Scaling in Games: Continued Pre-Training For Embodied Agents In Diverse Virtual Worlds</title>
+      <link>https://arxiv.org/abs/2610.28698</link>
+      <guid isPermaLink="false">ai-research-picks:f5ebfafb83c6121bc98f39f9cfc973f6aabff4e24d7f5bcd1bfbb265f5096b12</guid>
+      <pubDate>Thu, 22 Oct 2026 17:34:23 +0800</pubDate>
+      <category>world models</category>
+      <category>embodied agents</category>
+      <category>scaling laws</category>
+      <category>transfer learning</category>
+      <description><![CDATA[<p><strong>类型：</strong>论文</p><p><strong>作者/机构：</strong>Kuan Zhang, Yukun Chen, Zhihao Yang, Yue Su, Xiangnan Wu, Zirong Chen, Run Luo, Jinkun Hou, Tao Tan, Yinhe Zheng, Yiming Li</p><p><strong>原始发布日期：</strong>2026-10-20</p><p><strong>主题：</strong>world models · embodied agents · scaling laws · transfer learning</p><p><strong>推荐级别：</strong>值得浏览</p><p><strong>核心内容：</strong>作者用 120 组训练配置系统改变模型规模、数据时长和虚拟世界混合方式，研究持续预训练后的迁移。数据多样性有利于相关世界的迁移，但对差异较远的世界增益有限；只在单一世界训练时，增大模型也不必然改善远域泛化。</p><p><strong>为什么值得读：</strong>它把‘扩大训练规模就会得到通用 world model’变成可拆解的实证问题。写法上值得学三轴受控实验和按训练世界、相关世界、远域世界分层报告结果。</p><p><strong>局限/阅读提示：</strong>结果来自选定虚拟游戏、模型及持续预训练设置；验证损失和游戏表现不能直接代表真实物理环境中的规划与安全泛化。</p><p><a href="https://arxiv.org/abs/2610.28698">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>Depth Separation for Neural Networks under Gaussian Measure</title>
+      <link>https://arxiv.org/abs/2610.28800</link>
+      <guid isPermaLink="false">ai-research-picks:5cbdf0bf8aacf6f345855b46e58e43f6807fd99e52fabd72b2abc1df05a9de32</guid>
+      <pubDate>Thu, 22 Oct 2026 17:34:23 +0800</pubDate>
+      <category>theoretical ML</category>
+      <category>depth separation</category>
+      <category>Gaussian measure</category>
+      <category>formal verification</category>
+      <description><![CDATA[<p><strong>类型：</strong>论文</p><p><strong>作者/机构：</strong>Cynthia Bortolotto, Francisco Ganacim, Roberto I. Oliveira</p><p><strong>原始发布日期：</strong>2026-10-20</p><p><strong>主题：</strong>theoretical ML · depth separation · Gaussian measure · formal verification</p><p><strong>推荐级别：</strong>观察</p><p><strong>核心内容：</strong>作者在高维标准高斯测度下构造径向函数：三层 ReLU 网络可用多项式规模逼近，而权重受限的两层网络需要指数规模。证明借助 Hermite 展开的高频质量条件，论文称所有定理、引理和推论均用 Lean 4 验证。</p><p><strong>为什么值得读：</strong>这是离开 LLM 热点的一篇扎实理论练习；可学习如何把‘深度有用’限定成清晰的函数类、误差度量和权重条件，并让证明可审计。</p><p><strong>局限/阅读提示：</strong>结论是存在性分离，不表示一般训练数据上的三层网络必然优于两层；Lean 验证范围是作者在预印本中的报告，仍值得检查形式化代码与假设。</p><p><a href="https://arxiv.org/abs/2610.28800">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>How Claude designed protein binders against scorpion neurotoxins</title>
+      <link>https://www.anthropic.com/research/claude-scorpion-toxin-binder-design</link>
+      <guid isPermaLink="false">ai-research-picks:ac67a5f12ec971da5378affcfb59e522cccd9a1580f24d02e10082c921c86b57</guid>
+      <pubDate>Thu, 22 Oct 2026 17:34:23 +0800</pubDate>
+      <category>AI for science</category>
+      <category>research agents</category>
+      <category>protein design</category>
+      <category>wet-lab validation</category>
+      <description><![CDATA[<p><strong>类型：</strong>博客</p><p><strong>作者/机构：</strong>Anthropic；Adaptyv Bio；Twist Bioscience</p><p><strong>原始发布日期：</strong>2026-10-20</p><p><strong>主题：</strong>AI for science · research agents · protein design · wet-lab validation</p><p><strong>推荐级别：</strong>观察</p><p><strong>核心内容：</strong>Anthropic 报告内部研究模型在人工给定目标与数次后续指令下筛选蛋白结合体设计；合作实验室测试了 211 个设计，其中 17 个满足其结合判据。文章同时公开设计与实验数据，并明确未验证这些分子能否在细胞或动物中中和毒素。</p><p><strong>为什么值得读：</strong>把它当作跨领域的 AI 科研案例，而非产品能力宣传：写作上值得看任务边界、计算预算、人工介入与湿实验判据如何共同决定一个结果的可信度。</p><p><strong>局限/阅读提示：</strong>结合并不等于可用抗毒治疗；多毒素设计未达到多目标结合判据，约一万 GPU 小时的预算也影响可复现性。模型是内部版本，报告方对结果有商业利益。</p><p><a href="https://www.anthropic.com/research/claude-scorpion-toxin-binder-design">打开原文</a></p>]]></description>
+    </item>
     <item>
       <title>Robust agents learn causal world models</title>
       <link>https://arxiv.org/abs/2402.10877</link>
