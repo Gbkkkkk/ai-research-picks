@@ -1233,5 +1233,70 @@
     "summary_zh": "Anthropic 报告内部研究模型在人工给定目标与数次后续指令下筛选蛋白结合体设计；合作实验室测试了 211 个设计，其中 17 个满足其结合判据。文章同时公开设计与实验数据，并明确未验证这些分子能否在细胞或动物中中和毒素。",
     "why_zh": "把它当作跨领域的 AI 科研案例，而非产品能力宣传：写作上值得看任务边界、计算预算、人工介入与湿实验判据如何共同决定一个结果的可信度。",
     "caveat_zh": "结合并不等于可用抗毒治疗；多毒素设计未达到多目标结合判据，约一万 GPU 小时的预算也影响可复现性。模型是内部版本，报告方对结果有商业利益。"
+  },
+  {
+    "url": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/67d57c32e20fd0a7a302cb81d36e40d5-Abstract-Conference.html",
+    "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+    "added_at": "2026-10-26T14:38:08+08:00",
+    "published_at": "2022",
+    "content_type": "论文",
+    "authors": "Tri Dao, Dan Fu, Stefano Ermon, Atri Rudra, Christopher Ré",
+    "topics": ["attention", "systems", "GPU memory", "long context"],
+    "priority": "必读",
+    "summary_zh": "NeurIPS 2022 论文把注意力瓶颈重新表述为 GPU 高带宽显存与片上缓存之间的读写成本，用分块计算实现精确注意力，并分析特定缓存规模下的 IO 复杂度。它解释了为什么降低算术复杂度的近似注意力未必带来实际加速。",
+    "why_zh": "长上下文研究需要同时理解算法与硬件约束；写法值得学习：先指出既有评价指标遗漏的成本，再给出复杂度分析和实际吞吐测量。",
+    "caveat_zh": "论文中的加速数字依赖当年的 GPU、序列长度和实现；不能直接当作 2026 年所有模型的速度预期。"
+  },
+  {
+    "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/59f6421e64707225fdf5b28840679a07-Abstract-Conference.html",
+    "title": "LLMs Get Lost In Multi-Turn Conversation",
+    "added_at": "2026-10-26T14:38:08+08:00",
+    "published_at": "2025-05-09",
+    "content_type": "论文",
+    "authors": "Philippe Laban, Hiroaki Hayashi, Yingbo Zhou, Jennifer Neville",
+    "topics": ["NLP", "multi-turn evaluation", "agent reliability", "context"],
+    "priority": "必读",
+    "summary_zh": "论文在六类生成任务中比较信息一次给全与分轮提供的情形，报告所测模型的多轮表现平均下降 39%；分析超过 20 万段模拟对话后，指出早期假设和过早作答会让错误在后续轮次持续。初稿发表于 2025 年 5 月，后收入 ICLR 2026。",
+    "why_zh": "为 agent memory 和对话评测提供清晰的失效定义；写法值得学习：固定最终可用信息，仅改变交互过程，再把总性能差分解为能力与可靠性。",
+    "caveat_zh": "主要证据来自模拟对话和论文测试的模型；39% 是任务平均值，不能外推为真实用户对话或所有新模型的统一跌幅。"
+  },
+  {
+    "url": "https://transformer-circuits.pub/2021/framework/index.html",
+    "title": "A Mathematical Framework for Transformer Circuits",
+    "added_at": "2026-10-26T14:38:08+08:00",
+    "published_at": "2021-12-22",
+    "content_type": "博客",
+    "authors": "Nelson Elhage, Neel Nanda, Catherine Olsson 等；Anthropic",
+    "topics": ["mechanistic interpretability", "transformers", "induction heads", "theoretical ML"],
+    "priority": "值得浏览",
+    "summary_zh": "这篇长文建立残差流、QK 与 OV 电路及注意力头组合的分析语言，并用小型 attention-only Transformer 展示 induction head 如何实现上下文中的序列复制。它是机制可解释性研究的重要概念起点。",
+    "why_zh": "即便不做可解释性，分解计算路径的方法也有助于思考模型究竟怎样使用上下文；写法值得学习：先建立最小数学对象，再用可交互的玩具模型逐步检验直觉。",
+    "caveat_zh": "主要案例是小型简化模型；不能直接把相同电路结构视为大型现代模型所有行为的解释。作者所属机构也有研究立场。"
+  },
+  {
+    "url": "https://arxiv.org/abs/2610.32177",
+    "title": "$Ψ$-0.6: Adaptive Streams of Thought in a Unified Vision-Language World Model",
+    "added_at": "2026-10-26T14:38:08+08:00",
+    "published_at": "2026-10-23",
+    "content_type": "论文",
+    "authors": "Khai Loong Aw, Klemen Kotar, Baihan Zhang, Yifan Liu, Lilian Chen, Atlas Kazemian, Rahul Venkatesh, Daniel Yamins",
+    "topics": ["world models", "multimodal reasoning", "geometry", "reinforcement learning"],
+    "priority": "值得浏览",
+    "summary_zh": "作者把图像、文字、深度、光流和相机姿态编码进同一自回归模型，使几何估计、反事实场景生成与问答可串成可学习的中间推理步骤。论文报告空间推理与未见评测上的增益，核心问题是模型能否自己选择适合当前任务的表示。",
+    "why_zh": "与单纯扩大视觉语言模型不同，它把选择中间表示本身作为优化对象；写法上值得看如何用三层统一性串起模型设计、组合实验和 RL 实验。",
+    "caveat_zh": "2026 年 10 月 23 日首发预印本；作者承认尚未隔离统一训练中的正负迁移，当前自适应推理优化的是视觉问答而非真实机器人控制，模型与代码页标为未来发布。"
+  },
+  {
+    "url": "https://www.langchain.com/blog/context-engineering-starts-with-retrieval",
+    "title": "Context Engineering Starts with Retrieval",
+    "added_at": "2026-10-26T14:38:08+08:00",
+    "published_at": "2026-10-23",
+    "content_type": "博客",
+    "authors": "Jess Weng；LangChain",
+    "topics": ["agent memory", "retrieval", "context engineering", "RAG"],
+    "priority": "观察",
+    "summary_zh": "文章把 agent 检索故障拆成搜索低效、结果过大、资料陈旧或跑题三类，给出先定位后分页读取、把大结果保存为文件、由独立处理环节筛选相关内容的工程流程。它强调上下文预算应分配给当前决策需要的证据。",
+    "why_zh": "适合把长期记忆与 RAG 论文的想法落到可操作的系统设计；写法清楚地从故障模式推到具体工具与示例。",
+    "caveat_zh": "这是 LangChain 自家框架的技术指南，未提供独立对照实验；具体阈值和工具机制可能随产品版本变化。"
   }
 ]

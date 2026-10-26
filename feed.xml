@@ -6,8 +6,63 @@
     <description>每周一和周四更新的 AI 论文与技术博客精选：AI memory、world models、information theory、理论 ML、AI detector 与前沿热点。</description>
     <language>zh-CN</language>
     <atom:link href="https://Gbkkkkk.github.io/ai-research-picks/feed.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Thu, 22 Oct 2026 09:36:04 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 26 Oct 2026 06:38:58 +0000</lastBuildDate>
     <generator>Codex + scripts/update_feed.py</generator>
+    <item>
+      <title>FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness</title>
+      <link>https://proceedings.neurips.cc/paper_files/paper/2022/hash/67d57c32e20fd0a7a302cb81d36e40d5-Abstract-Conference.html</link>
+      <guid isPermaLink="false">ai-research-picks:ec2159bc37caf0e3d2382a0b3c60beffc47aaeeed969f138dd8e68f84ee9fc66</guid>
+      <pubDate>Mon, 26 Oct 2026 14:38:08 +0800</pubDate>
+      <category>attention</category>
+      <category>systems</category>
+      <category>GPU memory</category>
+      <category>long context</category>
+      <description><![CDATA[<p><strong>类型：</strong>论文</p><p><strong>作者/机构：</strong>Tri Dao, Dan Fu, Stefano Ermon, Atri Rudra, Christopher Ré</p><p><strong>原始发布日期：</strong>2022</p><p><strong>主题：</strong>attention · systems · GPU memory · long context</p><p><strong>推荐级别：</strong>必读</p><p><strong>核心内容：</strong>NeurIPS 2022 论文把注意力瓶颈重新表述为 GPU 高带宽显存与片上缓存之间的读写成本，用分块计算实现精确注意力，并分析特定缓存规模下的 IO 复杂度。它解释了为什么降低算术复杂度的近似注意力未必带来实际加速。</p><p><strong>为什么值得读：</strong>长上下文研究需要同时理解算法与硬件约束；写法值得学习：先指出既有评价指标遗漏的成本，再给出复杂度分析和实际吞吐测量。</p><p><strong>局限/阅读提示：</strong>论文中的加速数字依赖当年的 GPU、序列长度和实现；不能直接当作 2026 年所有模型的速度预期。</p><p><a href="https://proceedings.neurips.cc/paper_files/paper/2022/hash/67d57c32e20fd0a7a302cb81d36e40d5-Abstract-Conference.html">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>LLMs Get Lost In Multi-Turn Conversation</title>
+      <link>https://proceedings.iclr.cc/paper_files/paper/2026/hash/59f6421e64707225fdf5b28840679a07-Abstract-Conference.html</link>
+      <guid isPermaLink="false">ai-research-picks:3a9e83fe6f04c4781f2f3c6080bd5138fde3ca7b70f80db740a54651b186cdcb</guid>
+      <pubDate>Mon, 26 Oct 2026 14:38:08 +0800</pubDate>
+      <category>NLP</category>
+      <category>multi-turn evaluation</category>
+      <category>agent reliability</category>
+      <category>context</category>
+      <description><![CDATA[<p><strong>类型：</strong>论文</p><p><strong>作者/机构：</strong>Philippe Laban, Hiroaki Hayashi, Yingbo Zhou, Jennifer Neville</p><p><strong>原始发布日期：</strong>2025-05-09</p><p><strong>主题：</strong>NLP · multi-turn evaluation · agent reliability · context</p><p><strong>推荐级别：</strong>必读</p><p><strong>核心内容：</strong>论文在六类生成任务中比较信息一次给全与分轮提供的情形，报告所测模型的多轮表现平均下降 39%；分析超过 20 万段模拟对话后，指出早期假设和过早作答会让错误在后续轮次持续。初稿发表于 2025 年 5 月，后收入 ICLR 2026。</p><p><strong>为什么值得读：</strong>为 agent memory 和对话评测提供清晰的失效定义；写法值得学习：固定最终可用信息，仅改变交互过程，再把总性能差分解为能力与可靠性。</p><p><strong>局限/阅读提示：</strong>主要证据来自模拟对话和论文测试的模型；39% 是任务平均值，不能外推为真实用户对话或所有新模型的统一跌幅。</p><p><a href="https://proceedings.iclr.cc/paper_files/paper/2026/hash/59f6421e64707225fdf5b28840679a07-Abstract-Conference.html">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>A Mathematical Framework for Transformer Circuits</title>
+      <link>https://transformer-circuits.pub/2021/framework/index.html</link>
+      <guid isPermaLink="false">ai-research-picks:b948d6282416b586713968835f48c5ccec980762c3bcbfcd2d96efebfd8d6126</guid>
+      <pubDate>Mon, 26 Oct 2026 14:38:08 +0800</pubDate>
+      <category>mechanistic interpretability</category>
+      <category>transformers</category>
+      <category>induction heads</category>
+      <category>theoretical ML</category>
+      <description><![CDATA[<p><strong>类型：</strong>博客</p><p><strong>作者/机构：</strong>Nelson Elhage, Neel Nanda, Catherine Olsson 等；Anthropic</p><p><strong>原始发布日期：</strong>2021-12-22</p><p><strong>主题：</strong>mechanistic interpretability · transformers · induction heads · theoretical ML</p><p><strong>推荐级别：</strong>值得浏览</p><p><strong>核心内容：</strong>这篇长文建立残差流、QK 与 OV 电路及注意力头组合的分析语言，并用小型 attention-only Transformer 展示 induction head 如何实现上下文中的序列复制。它是机制可解释性研究的重要概念起点。</p><p><strong>为什么值得读：</strong>即便不做可解释性，分解计算路径的方法也有助于思考模型究竟怎样使用上下文；写法值得学习：先建立最小数学对象，再用可交互的玩具模型逐步检验直觉。</p><p><strong>局限/阅读提示：</strong>主要案例是小型简化模型；不能直接把相同电路结构视为大型现代模型所有行为的解释。作者所属机构也有研究立场。</p><p><a href="https://transformer-circuits.pub/2021/framework/index.html">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>$Ψ$-0.6: Adaptive Streams of Thought in a Unified Vision-Language World Model</title>
+      <link>https://arxiv.org/abs/2610.32177</link>
+      <guid isPermaLink="false">ai-research-picks:14628d0452b3d705c8c925e7c779dbc9f5bc276c243c33274b84c40dc3553efd</guid>
+      <pubDate>Mon, 26 Oct 2026 14:38:08 +0800</pubDate>
+      <category>world models</category>
+      <category>multimodal reasoning</category>
+      <category>geometry</category>
+      <category>reinforcement learning</category>
+      <description><![CDATA[<p><strong>类型：</strong>论文</p><p><strong>作者/机构：</strong>Khai Loong Aw, Klemen Kotar, Baihan Zhang, Yifan Liu, Lilian Chen, Atlas Kazemian, Rahul Venkatesh, Daniel Yamins</p><p><strong>原始发布日期：</strong>2026-10-23</p><p><strong>主题：</strong>world models · multimodal reasoning · geometry · reinforcement learning</p><p><strong>推荐级别：</strong>值得浏览</p><p><strong>核心内容：</strong>作者把图像、文字、深度、光流和相机姿态编码进同一自回归模型，使几何估计、反事实场景生成与问答可串成可学习的中间推理步骤。论文报告空间推理与未见评测上的增益，核心问题是模型能否自己选择适合当前任务的表示。</p><p><strong>为什么值得读：</strong>与单纯扩大视觉语言模型不同，它把选择中间表示本身作为优化对象；写法上值得看如何用三层统一性串起模型设计、组合实验和 RL 实验。</p><p><strong>局限/阅读提示：</strong>2026 年 10 月 23 日首发预印本；作者承认尚未隔离统一训练中的正负迁移，当前自适应推理优化的是视觉问答而非真实机器人控制，模型与代码页标为未来发布。</p><p><a href="https://arxiv.org/abs/2610.32177">打开原文</a></p>]]></description>
+    </item>
+    <item>
+      <title>Context Engineering Starts with Retrieval</title>
+      <link>https://www.langchain.com/blog/context-engineering-starts-with-retrieval</link>
+      <guid isPermaLink="false">ai-research-picks:b0133c74d1515b7b51e415fd65a00fc56e61c9aaa28d56cb02a5222ca7c9092c</guid>
+      <pubDate>Mon, 26 Oct 2026 14:38:08 +0800</pubDate>
+      <category>agent memory</category>
+      <category>retrieval</category>
+      <category>context engineering</category>
+      <category>RAG</category>
+      <description><![CDATA[<p><strong>类型：</strong>博客</p><p><strong>作者/机构：</strong>Jess Weng；LangChain</p><p><strong>原始发布日期：</strong>2026-10-23</p><p><strong>主题：</strong>agent memory · retrieval · context engineering · RAG</p><p><strong>推荐级别：</strong>观察</p><p><strong>核心内容：</strong>文章把 agent 检索故障拆成搜索低效、结果过大、资料陈旧或跑题三类，给出先定位后分页读取、把大结果保存为文件、由独立处理环节筛选相关内容的工程流程。它强调上下文预算应分配给当前决策需要的证据。</p><p><strong>为什么值得读：</strong>适合把长期记忆与 RAG 论文的想法落到可操作的系统设计；写法清楚地从故障模式推到具体工具与示例。</p><p><strong>局限/阅读提示：</strong>这是 LangChain 自家框架的技术指南，未提供独立对照实验；具体阈值和工具机制可能随产品版本变化。</p><p><a href="https://www.langchain.com/blog/context-engineering-starts-with-retrieval">打开原文</a></p>]]></description>
+    </item>
     <item>
       <title>Never Train from Scratch: Fair Comparison of Long-Sequence Models Requires Data-Driven Priors</title>
       <link>https://proceedings.iclr.cc/paper_files/paper/2024/hash/07cf32cf61224da628157b7ed0ce994a-Abstract-Conference.html</link>
